@@ -21,5 +21,15 @@
   "bugs": {
     "url": "https://github.com/manatran/orbit/issues"
   },
-  "homepage": "https://github.com/manatran/orbit#readme"
+  "homepage": "https://github.com/manatran/orbit#readme",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "husky": "^3.0.0"
+  }
 }
