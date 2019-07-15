@@ -4,7 +4,6 @@ Orbit is a beginner-friendly community for developers.
 
 ## Table of contents
 
-  - [Table of contents](#Table-of-contents)
   - [Screenshots](#Screenshots)
   - [Prerequisites](#Prerequisites)
   - [Getting started](#Getting-started)
