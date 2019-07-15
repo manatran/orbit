@@ -2,15 +2,23 @@
 
 Orbit is a beginner-friendly community for developers.
 
+## Table of contents
+
+  - [Table of contents](#Table-of-contents)
+  - [Screenshots](#Screenshots)
+  - [Prerequisites](#Prerequisites)
+  - [Getting started](#Getting-started)
+  - [Try it out](#Try-it-out)
+  - [Contributors](#Contributors)
+  - [License](#License)
+
 ## Screenshots
 
 {{ Coming soon }}
 
-## Technologies
+## Prerequisites
 
-- Node.js
-- React.js
-- PostgreSQL
+> [Node.js](https://nodejs.org/en/) >=10.11.0
 
 ## Getting started
 
