@@ -4,13 +4,28 @@
   "description": "A beginner friendly community for developers",
   "main": "server.js",
   "scripts": {
+    "format": "cd client && npm run format",
     "c-start": "concurrently \"cd client && npm start\" \"cd server && npm start\"",
     "c-install": "concurrently \"npm install\" \"cd client && npm install\" \"cd server && npm install\""
   },
   "repository": "https://github.com/manatran/orbit.git",
   "author": "Manaus Transez",
   "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run format",
+      "git add"
+    ]
+  },
   "devDependencies": {
-    "concurrently": "^4.1.1"
+    "concurrently": "^4.1.1",
+    "husky": "^3.0.0",
+    "lint-staged": "^9.2.0"
   }
 }
