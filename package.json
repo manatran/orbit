@@ -4,12 +4,13 @@
   "description": "A beginner friendly community for developers",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "c-start": "concurrently \"cd client && npm start\" \"cd server && npm start\"",
+    "c-install": "concurrently \"npm install\" \"cd client && npm install\" \"cd server && npm install\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/manatran/orbit.git"
-  },
+  "repository": "https://github.com/manatran/orbit.git",
   "author": "Manaus Transez",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^4.1.1"
+  }
 }

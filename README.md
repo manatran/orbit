@@ -45,23 +45,18 @@ module.exports = {
 };
 ```
 
-To run this project, first install all dependencies:
+Install all dependencies and run the application:
 
 ```sh
 npm run c-install
-```
-
-After installation has completed, run the app in development mode:
-
-```sh
-npm run c-start-dev
+npm run c-start
 ```
 
 Happy coding!
 
 ## Try it out
 
-This project will soon be hosted on Heroku.
+This project will soon be hosted online.
 
 ## Contributors
 
