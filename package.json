@@ -10,16 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/manatran/orbit.git"
   },
-  "keywords": [
-    "node",
-    "react",
-    "postgres",
-    "typescript"
-  ],
   "author": "Manaus Transez",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/manatran/orbit/issues"
-  },
-  "homepage": "https://github.com/manatran/orbit#readme"
+  "license": "MIT"
 }
