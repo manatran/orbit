@@ -4,11 +4,11 @@
 		"tslint:recommended",
 		"tslint-config-airbnb",
 		"tslint-react",
-		"tslint-config-prettier",
-		"tslint-plugin-prettier"
+		"tslint-plugin-prettier",
+		"tslint-config-prettier"
 	],
 	"rules": {
-		"prettier": true,
+    "prettier": true,
 		"import-name": false,
 		"object-literal-sort-keys": false,
 		"jsx-no-lambda": false,
