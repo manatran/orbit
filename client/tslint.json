@@ -12,6 +12,7 @@
 		"import-name": false,
 		"object-literal-sort-keys": false,
 		"jsx-no-lambda": false,
+		"jsx-boolean-value": false,
     "interface-name": [true, "never-prefix"],
     "no-console": false,
     "variable-name": {
