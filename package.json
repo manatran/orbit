@@ -4,9 +4,10 @@
   "description": "A beginner friendly community for developers",
   "main": "server.js",
   "scripts": {
+    "lint": "cd client && npm run lint",
     "format": "cd client && npm run format",
-    "c-start": "concurrently \"cd client && npm start\" \"cd server && npm start\"",
-    "c-install": "concurrently \"npm install\" \"cd client && npm install\" \"cd server && npm install\""
+    "start-all": "concurrently \"cd client && npm start\" \"cd server && npm start\"",
+    "install-all": "concurrently \"npm install\" \"cd client && npm install\" \"cd server && npm install\""
   },
   "repository": "https://github.com/manatran/orbit.git",
   "author": "Manaus Transez",
