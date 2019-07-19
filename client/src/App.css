@@ -4,7 +4,10 @@
   /* Variables */
   --main: #40a3e6;
   --text: #333;
-  --bg: #fafbfc;
+  --text-light: #666;
+  --text-lighter: #999;
+	--bg: #fafbfc;
+	--light-grey: #D7D7D7;
 }
 
 ::selection {
@@ -15,4 +18,35 @@
 body {
   color: var(--text);
   background: var(--bg);
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-light);
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.centered {
+	align-items: center;
+	justify-content: center;
+}
+.a-centered {
+	align-items: center;
+}
+.j-centered {
+	justify-content: center;
+}
+.j-around {
+	justify-content: space-around;
+}
+.j-between {
+	justify-content: space-between;
 }
