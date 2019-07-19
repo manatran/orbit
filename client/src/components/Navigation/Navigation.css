@@ -32,6 +32,7 @@ nav .logo img {
 nav .dropdown {
 	width: 100%;
 	max-width: 200px;
+	margin-right: 16px;
 }
 
 nav .dropdown h2 {

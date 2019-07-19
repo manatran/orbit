@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
+import { SearchBar } from "../index";
 import NavigationDropdown from "./NavigationDropdown";
 
 import "./Navigation.css";
@@ -10,7 +11,7 @@ const Navigation: React.FC = () => {
 	const [dropdown, setDropdown] = useState(false);
 
 	return (
-		<nav className="row a-centered">
+		<nav className="row a-centered j-between">
 			<Link to="/" className="logo row centered">
 				<img src={Logo} alt="Orbit" />
 				<span>Orbit</span>
@@ -26,9 +27,10 @@ const Navigation: React.FC = () => {
 					</span>
 					<i className="material-icons">arrow_drop_down</i>
 				</button>
-
 				{dropdown && <NavigationDropdown />}
 			</section>
+
+			<SearchBar />
 		</nav>
 	);
 };

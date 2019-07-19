@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 
-const NavigationDropdown = () => {
+const NavigationDropdown: React.FC = () => {
 	return (
 		<section className="list column">
 			<section className="menu">
