@@ -1,23 +1,23 @@
 :root {
-  font-size: 16px;
-  font-family: 'Roboto', 'Segoe UI', 'Helvetica Neue', sans-serif;
-  /* Variables */
-  --main: #40a3e6;
-  --text: #333;
-  --text-light: #666;
-  --text-lighter: #999;
+	font-size: 16px;
+	font-family: 'Roboto', 'Segoe UI', 'Helvetica Neue', sans-serif;
+	/* Variables */
+	--main: #40a3e6;
+	--text: #333;
+	--text-light: #666;
+	--text-lighter: #999;
 	--bg: #fafbfc;
 	--light-grey: #D7D7D7;
 }
 
 ::selection {
-  color: white;
-  background-color: var(--main);
+	color: white;
+	background-color: var(--main);
 }
 
 body {
-  color: var(--text);
-  background: var(--bg);
+	color: var(--text);
+	background: var(--bg);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -75,7 +75,7 @@ a {
 }
 
 @media only screen and (max-width: 480px) {
-  .sm-hide {
-    display: none;
-  }
+	.sm-hide {
+		display: none;
+	}
 }

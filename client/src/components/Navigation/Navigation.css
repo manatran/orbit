@@ -1,9 +1,9 @@
 nav {
 	top: 0;
-  width: 100%;
-  z-index: 200;
-  position: fixed;
-  background-color: white;
+	width: 100%;
+	z-index: 200;
+	position: fixed;
+	background-color: white;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 	padding: 4px 16px;
 	box-sizing: border-box;
@@ -15,7 +15,7 @@ nav {
 nav .logo {
 	font-size: 20px;
 	font-weight: bold;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 nav .logo span {
 	margin-top: -3px;
@@ -23,10 +23,10 @@ nav .logo span {
 }
 
 nav .logo img {
-  height: 32px;
-  width: 32px;
-  margin-right: 8px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+	height: 32px;
+	width: 32px;
+	margin-right: 8px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 nav .links {
@@ -127,7 +127,7 @@ nav .user .rep {
 }
 
 @media only screen and (max-width: 480px) {
-  nav .dropdown {
+	nav .dropdown {
 		width: auto;
 	}
 	nav .dropdown:last-of-type .list {
