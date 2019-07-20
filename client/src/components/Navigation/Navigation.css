@@ -5,7 +5,7 @@ nav {
   position: fixed;
   background-color: white;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-	padding: 8px;
+	padding: 4px 16px;
 	box-sizing: border-box;
 	user-select: none;
 }
@@ -29,9 +29,28 @@ nav .logo img {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-nav .create {
+nav .links {
+	padding-right: 8px;
+	margin-right: 8px;
+	border-right: solid 1px var(--light-grey);
+}
+
+nav .links i {
+	padding: 4px;
+	font-size: 20px;
+	color: var(--text-lighter);
+	margin: 0 6px;
+	border-radius: 4px;
+	border: solid 1px transparent;
+}
+
+nav .links i:hover {
+	background-color: var(--bg);
+	border: solid 1px var(--light-grey);
+}
+
+nav .create i {
 	color: var(--main);
-	margin-right: 16px;
 }
 
 nav .dropdown i.icon,
