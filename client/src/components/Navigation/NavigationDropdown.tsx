@@ -18,7 +18,7 @@ const NavigationDropdownButton = () => {
 		<React.Fragment>
 			<span className="row a-centered">
 				<i className="material-icons icon">trending_up</i>
-				<span>Feed</span>
+				<span className="sm-hide">Feed</span>
 			</span>
 			<i className="material-icons">arrow_drop_down</i>
 		</React.Fragment>

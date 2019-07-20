@@ -1,24 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/logo.png";
 import Dropdown from "../Dropdown/Dropdown";
 
 const UserDropdown: React.FC = () => {
 	return (
 		<Dropdown
 			width="150px"
-			button={<NavigationDropdownButton />}
-			list={<NavigationDropdownList />}
+			button={<UserDropdownButton />}
+			list={<UserDropdownList />}
 		/>
 	);
 };
 export default UserDropdown;
 
-const NavigationDropdownButton = () => {
+const UserDropdownButton = () => {
 	return (
 		<React.Fragment>
 			<span className="row a-centered j-end" style={{ alignSelf: "flex-end" }}>
-				<div className="user column a-end">
+				<div className="user column a-end sm-hide">
 					<span className="username">manatran</span>
 					<span className="rep">800 rep</span>
 				</div>
@@ -33,7 +32,7 @@ const NavigationDropdownButton = () => {
 	);
 };
 
-const NavigationDropdownList = () => {
+const UserDropdownList = () => {
 	return (
 		<React.Fragment>
 			<section className="menu">
@@ -48,7 +47,7 @@ const NavigationDropdownList = () => {
 				</Link>
 			</section>
 
-			<section className="links column">
+			<section className="column">
 				<h2 className="small">Links</h2>
 				<Link to="/privacy">Privacy policy</Link>
 				<Link to="/terms">Terms of use</Link>

@@ -73,3 +73,9 @@ a {
 .a-end {
 	align-items: flex-end;
 }
+
+@media only screen and (max-width: 480px) {
+  .sm-hide {
+    display: none;
+  }
+}

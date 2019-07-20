@@ -53,6 +53,10 @@ nav .create i {
 	color: var(--main);
 }
 
+nav .dropdown:first-of-type {
+	margin-right: 16px;
+}
+
 nav .dropdown i.icon,
 nav .dropdown img {
 	height: 24px;
@@ -120,4 +124,16 @@ nav .user .username {
 }
 nav .user .rep {
 	color: var(--main);
+}
+
+@media only screen and (max-width: 480px) {
+  nav .dropdown {
+		width: auto;
+	}
+	nav .dropdown:last-of-type .list {
+		right: 16px;
+	}
+	nav .dropdown .profile-pic {
+		margin-left: 0;
+	}
 }

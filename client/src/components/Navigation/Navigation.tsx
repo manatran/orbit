@@ -12,12 +12,12 @@ const Navigation: React.FC = () => {
 		<nav className="row a-centered j-between">
 			<Link to="/" className="logo row centered">
 				<img src={Logo} alt="Orbit" className="rounded" />
-				<span>Orbit</span>
+				<span className="sm-hide">Orbit</span>
 			</Link>
 			<NavigationDropdown />
 			<SearchBar />
 
-			<section className="links row">
+			<section className="links row sm-hide">
 				<Link to="/" className="centered" title="Feed">
 					<i className="material-icons">trending_up</i>
 				</Link>
