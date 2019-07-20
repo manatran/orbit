@@ -1,0 +1,30 @@
+.dropdown {
+	width: 100%;
+	max-width: 200px;
+}
+
+.dropdown button {
+	cursor: pointer;
+	width: 100%;
+	outline: none;
+	padding: 4px 8px;
+	border-radius: 4px;
+	color: var(--text-light);
+	background-color: transparent;
+	border: solid 1px transparent;
+}
+
+.dropdown button:hover,
+.dropdown button:focus {
+	background-color: var(--bg);
+	border: solid 1px var(--light-grey);
+}
+
+.dropdown button:focus + .list,
+.dropdown .list:hover {
+	display: block;
+}
+
+.dropdown .list i {
+	color: var(--text-lighter);
+}

@@ -1,0 +1,29 @@
+.search {
+	margin-right: 16px;
+	flex-grow: 1;
+	padding: 0 8px;
+	border-radius: 4px;
+	color: var(--text-lighter);
+	background-color: var(--bg);
+	border: solid 1px var(--light-grey);
+}
+
+.search::placeholder {
+	color: var(--text-lighter);
+}
+
+.search input {
+	outline: none;
+	border: none;
+	padding: 8px 0;
+	margin: 0;
+	background-color: transparent;
+	color: var(--text-light);
+	width: 100%;
+}
+
+.search i.material-icons {
+	font-size: 20px;
+	margin-right: 4px;
+	user-select: none;
+}

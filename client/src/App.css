@@ -1,18 +1,81 @@
 :root {
-  font-size: 16px;
-  font-family: 'Roboto', 'Segoe UI', 'Helvetica Neue', sans-serif;
-  /* Variables */
-  --main: #40a3e6;
-  --text: #333;
-  --bg: #fafbfc;
+	font-size: 16px;
+	font-family: 'Roboto', 'Segoe UI', 'Helvetica Neue', sans-serif;
+	/* Variables */
+	--main: #40a3e6;
+	--text: #333;
+	--text-light: #666;
+	--text-lighter: #999;
+	--bg: #fafbfc;
+	--light-grey: #D7D7D7;
 }
 
 ::selection {
-  color: white;
-  background-color: var(--main);
+	color: white;
+	background-color: var(--main);
 }
 
 body {
-  color: var(--text);
-  background: var(--bg);
+	color: var(--text);
+	background: var(--bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Segoe UI', sans-serif;
+}
+
+h2.small {
+	font-size: 10px;
+	margin-top: 4px;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	color: var(--text-lighter);
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-light);
+}
+
+.rounded {
+	border-radius: 50%;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.centered {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.a-centered {
+	align-items: center;
+}
+.j-centered {
+	justify-content: center;
+}
+.j-around {
+	justify-content: space-around;
+}
+.j-between {
+	justify-content: space-between;
+}
+.j-end {
+	justify-content: flex-end;
+}
+.a-end {
+	align-items: flex-end;
+}
+
+@media only screen and (max-width: 480px) {
+	.sm-hide {
+		display: none;
+	}
 }
