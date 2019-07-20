@@ -20,9 +20,25 @@ body {
   background: var(--bg);
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Segoe UI', sans-serif;
+}
+
+h2.small {
+	font-size: 10px;
+	margin-top: 4px;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	color: var(--text-lighter);
+}
+
 a {
 	text-decoration: none;
 	color: var(--text-light);
+}
+
+.rounded {
+	border-radius: 50%;
 }
 
 .row {
@@ -50,4 +66,10 @@ a {
 }
 .j-between {
 	justify-content: space-between;
+}
+.j-end {
+	justify-content: flex-end;
+}
+.a-end {
+	align-items: flex-end;
 }
