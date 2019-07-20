@@ -54,7 +54,7 @@ const UserDropdownList = () => {
 			</section>
 
 			<section className="logout">
-				<Link to="/settings" className="row a-centered">
+				<Link to="/signout" className="row a-centered">
 					<i className="material-icons icon">logout</i>
 					Logout
 				</Link>
