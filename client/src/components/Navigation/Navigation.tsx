@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/logo.png";
-import { SearchBar } from "../index";
+import { Logo, SearchBar } from "../index";
 import NavigationDropdown from "./NavigationDropdown";
 import UserDropdown from "./UserDropdown";
 
@@ -11,7 +10,7 @@ const Navigation: React.FC = () => {
 	return (
 		<nav className="row a-centered j-between">
 			<Link to="/" className="logo row centered">
-				<img src={Logo} alt="Orbit" className="rounded" />
+				<Logo />
 				<span className="sm-hide">Orbit</span>
 			</Link>
 			<NavigationDropdown />

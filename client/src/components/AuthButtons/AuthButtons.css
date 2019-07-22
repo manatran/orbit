@@ -1,0 +1,24 @@
+.auth-btns {
+	width: 100%;
+}
+
+.auth-btns .button {
+	width: 240px;
+	margin: 8px;
+}
+
+.auth-btns .gh-login {
+  background-color: var(--gh);
+  border: solid 1px var(--gh);
+}
+
+.auth-btns .gl-login {
+  background-color: var(--gl);
+  border: solid 1px var(--gl);
+}
+
+.auth-btns .button img {
+  height: 24px;
+  width: 24px;
+  margin-left: 16px;
+}
