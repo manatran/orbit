@@ -42,7 +42,7 @@ const NavigationDropdownList = () => {
 
 			<section className="favorites">
 				<h2 className="small">Favorites</h2>
-				<div className="sub row a-centered j-between">
+				<div className="row a-centered j-between">
 					<Link to="/challenges" className="row a-centered">
 						<img src={Logo} alt="Challenges" />
 						Subscription
@@ -58,7 +58,7 @@ const NavigationDropdownList = () => {
 
 			<section className="subscriptions">
 				<h2 className="small">Subscriptions</h2>
-				<div className="sub row a-centered j-between">
+				<div className="row a-centered j-between">
 					<Link to="/challenges" className="row a-centered">
 						<img src={Logo} alt="Challenges" />
 						Subscription
@@ -68,7 +68,7 @@ const NavigationDropdownList = () => {
 					</i>
 				</div>
 
-				<div className="sub row a-centered j-between">
+				<div className="row a-centered j-between">
 					<Link to="/challenges" className="row a-centered">
 						<img src={Logo} alt="Challenges" />
 						Subscription
@@ -78,7 +78,7 @@ const NavigationDropdownList = () => {
 					</i>
 				</div>
 
-				<div className="sub row a-centered j-between">
+				<div className="row a-centered j-between">
 					<Link to="/challenges" className="row a-centered">
 						<img src={Logo} alt="Challenges" />
 						Subscription

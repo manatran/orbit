@@ -126,12 +126,19 @@ nav .user .rep {
 	color: var(--main);
 }
 
-@media only screen and (max-width: 480px) {
+nav .dropdown:last-of-type,
+nav .dropdown:last-of-type button {
+	width: auto !important;
+	justify-content: flex-end;
+}
+
+nav .dropdown:last-of-type .list {
+	right: 16px;
+}
+
+@media only screen and (max-width: 720px) {
 	nav .dropdown {
-		width: auto;
-	}
-	nav .dropdown:last-of-type .list {
-		right: 16px;
+		width: auto !important;
 	}
 	nav .dropdown .profile-pic {
 		margin-left: 0;
