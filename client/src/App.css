@@ -29,7 +29,11 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Segoe UI", sans-serif;
+  font-family: "Segoe UI", "Roboto", sans-serif;
+}
+
+h2 {
+  font-size: 16px;
 }
 
 h2.small {
@@ -47,8 +51,7 @@ a {
 button:focus{
   outline: none;
 }
-button.button,
-a.button {
+.button {
   cursor: pointer;
   outline: none;
   margin-bottom: 16px;
@@ -63,24 +66,20 @@ a.button {
   background-color: var(--main);
   border: solid 1px var(--main);
 }
-button.button.small,
-a.button.small {
+.button.small {
 	padding: 8px;
 	width: 150px;
 }
-button.light,
-a.button.light {
+.button.light {
   color: #40a3e6;
   background-color: transparent;
 }
-button.danger,
-a.button.danger {
+.button.danger {
   background-color: transparent;
   border: solid 1px var(--danger);
   color: var(--danger);
 }
-button.disabled,
-a.button.disabled {
+.button.disabled {
 	opacity: 0.8;
 	cursor: no-drop;
 	filter: contrast(0.66);

@@ -1,0 +1,60 @@
+aside {
+	position: -webkit-sticky;
+  position: sticky;
+  top: 44px;
+  width: 320px;
+	padding: 24px;
+  margin-right: 16px;
+	box-sizing: border-box;
+	max-height: calc(100vh - 44px);
+}
+
+aside .button {
+	font-size: 14px;
+	padding: 8px;
+	margin-bottom: 8px;
+}
+
+aside .popular {
+	margin-top: 14px;
+}
+
+aside footer {
+	margin-top: 32px;
+}
+
+aside footer .row .column {
+	width: 50%;
+}
+
+aside footer a {
+	margin: 4px 0;
+	margin-left: 0;
+	color: var(--text-light);
+	font-size: 12px;
+}
+
+aside .social {
+	margin: 32px 0;
+}
+
+aside .social img {
+	width: 24px;
+	height: 24px;
+}
+
+aside .copy {
+	font-size: 14px;
+	text-align: center;
+}
+
+aside .copy p {
+	margin: 4px 0 0 0;
+	color: var(--text-lighter);
+}
+
+@media only screen and (max-width: 1000px) {
+  aside {
+    display: none !important;
+  }
+}
