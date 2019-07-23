@@ -52,7 +52,7 @@ const Sidebar: React.FC = () => {
 					</div>
 				</section>
 
-				<section className="social row">
+				<section className="social row j-between">
 					<a
 						href="https://manatran.github.io"
 						target="_blank"
@@ -83,8 +83,8 @@ const Sidebar: React.FC = () => {
 					</a>
 				</section>
 
-				<section className="copy">
-					<p>&copy; 2019 Manaus Transez</p>
+				<section className="copy column centered">
+					<p>&copy; {new Date().getFullYear()} Manaus Transez</p>
 					<p>All rights reserved.</p>
 				</section>
 			</footer>

@@ -18,3 +18,35 @@ aside .button {
 aside .popular {
 	margin-top: 16px;
 }
+
+aside .nav {
+	margin-top: 32px;
+}
+aside .nav .column {
+	width: 50%;
+}
+aside .nav a {
+	margin: 4px 0;
+	margin-left: 0;
+	color: var(--text-light);
+	font-size: 12px;
+}
+
+aside .social {
+	margin-top: 16px;
+}
+
+aside .social img {
+	width: 24px;
+	height: 24px;
+}
+
+aside .copy {
+	margin-top: 16px;
+	font-size: 14px;
+}
+
+aside .copy p {
+	margin: 4px 0 0 0;
+	color: var(--text-lighter);
+}
