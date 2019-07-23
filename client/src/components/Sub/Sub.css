@@ -1,0 +1,47 @@
+.sub {
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.sub img {
+  height: 24px;
+  width: 24px;
+  margin-right: 8px;
+}
+
+.sub p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.sub .meta .description {
+	font-size: 12px;
+	font-family: "Roboto SemiBold";
+	font-weight: 700;
+  color: #999;
+}
+
+.sub .meta .subs {
+	margin-top: 4px;
+	font-size: 12px;
+	font-family: "Roboto", "Roboto", sans-serif;
+	font-weight: 300;
+  color: #999;
+}
+
+.sub.big img {
+  height: 64px;
+  width: 64px;
+  border-radius: 8px;
+  margin-right: 24px;
+}
+.sub.big p{
+  font-size: 16px;
+  color: #666;
+  font-family: "Roboto Black", "Roboto", sans-serif;
+  font-weight: 900;
+}
+.sub.big .meta .light {
+  font-size: 14px;
+  text-transform: lowercase;
+}
