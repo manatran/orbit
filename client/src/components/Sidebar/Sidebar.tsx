@@ -40,13 +40,13 @@ const Sidebar: React.FC = () => {
 			</section>
 
 			<footer>
-				<section className="nav row">
+				<section className="row">
 					<div className="column">
 						<Link to="/">Feed</Link>
 						<Link to="/challenges">Code challenges</Link>
 						<Link to="/suggestions">Challenge suggestions</Link>
 					</div>
-					<div className="column">
+					<div className="column a-end">
 						<Link to="/privacy">Privacy policy</Link>
 						<Link to="/terms">Terms of use</Link>
 					</div>

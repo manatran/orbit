@@ -2,8 +2,8 @@ aside {
 	position: -webkit-sticky;
   position: sticky;
   top: 44px;
-  width: 250px;
-	padding: 16px;
+  width: 320px;
+	padding: 24px;
   margin-right: 16px;
 	box-sizing: border-box;
 	max-height: calc(100vh - 44px);
@@ -16,16 +16,18 @@ aside .button {
 }
 
 aside .popular {
-	margin-top: 16px;
+	margin-top: 14px;
 }
 
-aside .nav {
+aside footer {
 	margin-top: 32px;
 }
-aside .nav .column {
+
+aside footer .row .column {
 	width: 50%;
 }
-aside .nav a {
+
+aside footer a {
 	margin: 4px 0;
 	margin-left: 0;
 	color: var(--text-light);
@@ -33,7 +35,7 @@ aside .nav a {
 }
 
 aside .social {
-	margin-top: 16px;
+	margin: 32px 0;
 }
 
 aside .social img {
@@ -42,11 +44,17 @@ aside .social img {
 }
 
 aside .copy {
-	margin-top: 16px;
 	font-size: 14px;
+	text-align: center;
 }
 
 aside .copy p {
 	margin: 4px 0 0 0;
 	color: var(--text-lighter);
+}
+
+@media only screen and (max-width: 1000px) {
+  aside {
+    display: none !important;
+  }
 }
