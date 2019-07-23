@@ -1,6 +1,6 @@
 :root {
 	font-size: 16px;
-	font-family: 'Roboto', 'Segoe UI', 'Helvetica Neue', sans-serif;
+	font-family: "Roboto", "Segoe UI", "Helvetica Neue", sans-serif;
 	/* Variables */
 	--main: #40a3e6;
 	--danger: #e64040;
@@ -14,6 +14,8 @@
 	--gl: #4f3e7f;
 	--header-1: #3c95d1;
 	--header-2: #be62bb;
+	--header-3: #37c862;
+	--header-4: #1a8fb4;
 }
 
 ::selection {
@@ -27,7 +29,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Segoe UI', sans-serif;
+	font-family: "Segoe UI", sans-serif;
 }
 
 h2.small {
@@ -98,10 +100,6 @@ p.light {
 }
 .danger {
   color: var(--danger);
-}
-
-.body {
-	margin-top: 44px;
 }
 
 .rounded {
