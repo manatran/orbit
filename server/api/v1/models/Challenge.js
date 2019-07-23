@@ -5,18 +5,18 @@ module.exports = (db, DataTypes) => {
     month: {
 			type: DataTypes.ENUM,
 			values: [
-				'jan',
-				'feb',
-				'mar',
-				'apr',
-				'may',
-				'jun',
-				'jul',
-				'aug',
-				'sep',
-				'oct',
-				'nov',
-				'dec'
+				"jan",
+				"feb",
+				"mar",
+				"apr",
+				"may",
+				"jun",
+				"jul",
+				"aug",
+				"sep",
+				"oct",
+				"nov",
+				"dec"
 			]
 		},
     year: DataTypes.INTEGER

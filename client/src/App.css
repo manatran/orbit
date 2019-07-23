@@ -1,13 +1,21 @@
 :root {
 	font-size: 16px;
-	font-family: 'Roboto', 'Segoe UI', 'Helvetica Neue', sans-serif;
+	font-family: "Roboto", "Segoe UI", "Helvetica Neue", sans-serif;
 	/* Variables */
 	--main: #40a3e6;
+	--danger: #e64040;
 	--text: #333;
 	--text-light: #666;
 	--text-lighter: #999;
+	--text-lightest: #a7a7a7;
 	--bg: #fafbfc;
 	--light-grey: #D7D7D7;
+	--gh: #24292e;
+	--gl: #4f3e7f;
+	--header-1: #3c95d1;
+	--header-2: #be62bb;
+	--header-3: #37c862;
+	--header-4: #1a8fb4;
 }
 
 ::selection {
@@ -21,7 +29,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Segoe UI', sans-serif;
+	font-family: "Segoe UI", sans-serif;
 }
 
 h2.small {
@@ -35,6 +43,63 @@ h2.small {
 a {
 	text-decoration: none;
 	color: var(--text-light);
+}
+button:focus{
+  outline: none;
+}
+button.button,
+a.button {
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 16px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 4px;
+  max-width: 100%;
+  width: 250px;
+  padding: 16px;
+  box-sizing: border-box;
+  color: white;
+  background-color: var(--main);
+  border: solid 1px var(--main);
+}
+button.button.small,
+a.button.small {
+	padding: 8px;
+	width: 150px;
+}
+button.light,
+a.button.light {
+  color: #40a3e6;
+  background-color: transparent;
+}
+button.danger,
+a.button.danger {
+  background-color: transparent;
+  border: solid 1px var(--danger);
+  color: var(--danger);
+}
+button.disabled,
+a.button.disabled {
+	opacity: 0.8;
+	cursor: no-drop;
+	filter: contrast(0.66);
+}
+
+p.error {
+	font-size: 14px;
+  color: var(--danger);
+}
+p.success {
+	font-size: 14px;
+  color: var(--main) !important;
+}
+p.light {
+	font-size: 12px;
+	color:  var(--text-lightest);
+}
+.danger {
+  color: var(--danger);
 }
 
 .rounded {
@@ -72,6 +137,9 @@ a {
 }
 .a-end {
 	align-items: flex-end;
+}
+.wrap {
+	flex-wrap: wrap;
 }
 
 @media only screen and (max-width: 480px) {

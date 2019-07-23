@@ -1,0 +1,28 @@
+header {
+	color: white;
+	margin-top: 44px;
+	padding: 48px 32px;
+	box-sizing: border-box;
+	background-image: url("../../assets/pattern.png"), linear-gradient(to right, var(--header-1), var(--header-2));
+}
+
+header .intro,
+header .login-btns {
+	margin: 0 48px 16px 48px;
+}
+
+header h1 {
+	margin: 8px 0;
+	font-family: "Segoe UI", sans-serif;
+}
+
+header p {
+	margin: 4px 0;
+  color: #f9f9f9;
+}
+
+header .logo {
+	width: 64px;
+	height: 64px;
+	box-shadow: 0 1px 4px var(--text-light);
+}
