@@ -1,0 +1,36 @@
+.question {
+	background-color: white;
+	padding: 16px;
+	margin-bottom: 16px;
+	box-shadow: 0 2px 3px var(--light-grey);
+}
+
+.question .thumbnail {
+	height: 64px;
+	width: 64px;
+	background-size: 60px;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-right: 16px;
+}
+
+.question-body h3,
+.question-body p {
+	margin: 0;
+}
+
+.question-body h3 {
+	margin-bottom: 8px;
+}
+
+.question-body p {
+	color: var(--text-light);
+	font-size: 14px;
+}
+
+.question-body i.material-icons {
+	font-size: 14px;
+	position: relative;
+	top: 2px;
+	right: -1px;
+}

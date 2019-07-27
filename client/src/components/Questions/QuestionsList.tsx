@@ -1,15 +1,24 @@
 import React from "react";
-import { Question } from "../index";
+import { Question, Skeleton } from "../index";
 import { QuestionProps } from "./Question";
 
 interface QuestionsListProps {
 	questions: QuestionProps[];
+	loading: boolean;
+	error: boolean;
 }
 
-const QuestionsList: React.FC<QuestionsListProps> = ({ questions }) => {
+const QuestionsList: React.FC<QuestionsListProps> = ({
+	questions,
+	loading,
+	error,
+}) => {
 	return (
 		<div className="questions">
-			{questions.length > 0 ? (
+			{loading && <QuestionSkeleton />}
+			{error && <QuestionError />}
+
+			{!loading && !error && questions.length > 0 ? (
 				questions.map((el: any) => (
 					<Question
 						key={el.id}
@@ -28,3 +37,17 @@ const QuestionsList: React.FC<QuestionsListProps> = ({ questions }) => {
 	);
 };
 export default QuestionsList;
+
+const QuestionSkeleton = () => {
+	return (
+		<div>
+			<Skeleton />
+			<Skeleton />
+			<Skeleton />
+		</div>
+	);
+};
+
+const QuestionError = () => {
+	return <p className="light">Something went wrong. Please try again later.</p>;
+};
