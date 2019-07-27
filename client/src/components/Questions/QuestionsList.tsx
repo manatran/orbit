@@ -7,7 +7,6 @@ interface QuestionsListProps {
 }
 
 const QuestionsList: React.FC<QuestionsListProps> = ({ questions }) => {
-	console.log("render");
 	return (
 		<div className="questions">
 			{questions.length > 0 ? (

@@ -1,0 +1,32 @@
+.skeleton-container {
+	margin-bottom: 32px;
+	width: 100%;
+	--skeleton-bg: #efefef;
+	--skeleton-fg: #dfdfdf;
+}
+
+.skeleton-img {
+	width: 64px;
+	height: 64px;
+	background-color: var(--skeleton-bg);
+	margin-right: 16px;
+}
+
+.skeleton-title,
+.skeleton-text {
+	height: 20px;
+	background-color: var(--skeleton-bg);
+	display: block;
+	margin: 0;
+	margin-bottom: 8px;
+	background-image: linear-gradient(to right, var(--skeleton-bg), var(--skeleton-fg));
+}
+
+.skeleton-title {
+	margin-bottom: 16px;
+	width: 200px;
+}
+
+.skeleton-text {
+	width: 300px;
+}

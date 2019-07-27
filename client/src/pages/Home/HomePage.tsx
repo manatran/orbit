@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, QuestionsList, Sidebar, Spinner } from "../../components";
+import { Header, QuestionsList, Sidebar, Skeleton } from "../../components";
 import { useFetch } from "../../hooks";
 
 const HomePage: React.FC = () => {
@@ -13,7 +13,15 @@ const HomePage: React.FC = () => {
 
 				<main>
 					<h2>Trending questions</h2>
-					{loading ? <Spinner /> : <QuestionsList questions={data} />}
+					{loading ? (
+						<div>
+							<Skeleton />
+							<Skeleton />
+							<Skeleton />
+						</div>
+					) : (
+						<QuestionsList questions={data} />
+					)}
 				</main>
 			</div>
 		</React.Fragment>

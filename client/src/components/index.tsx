@@ -6,6 +6,7 @@ import Question from "./Questions/Question";
 import QuestionsList from "./Questions/QuestionsList";
 import SearchBar from "./SearchBar/SearchBar";
 import Sidebar from "./Sidebar/Sidebar";
+import Skeleton from "./Skeleton/Skeleton";
 import Spinner from "./Spinner/Spinner";
 import Sub from "./Sub/Sub";
 
@@ -18,6 +19,7 @@ export {
 	QuestionsList,
 	SearchBar,
 	Sidebar,
+	Skeleton,
 	Spinner,
 	Sub,
 };

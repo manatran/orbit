@@ -23,7 +23,9 @@ const Question: React.FC<QuestionProps> = ({
 }) => {
 	return (
 		<div className="question">
-			<p>{title}</p>
+			<p>
+				{title} {likes || 0}
+			</p>
 		</div>
 	);
 };
