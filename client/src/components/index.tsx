@@ -4,6 +4,7 @@ import Logo from "./Logo/Logo";
 import Navigation from "./Navigation/Navigation";
 import Question from "./Questions/Question";
 import QuestionsList from "./Questions/QuestionsList";
+import ScrollTop from "./ScrollTop/ScrollTop";
 import SearchBar from "./SearchBar/SearchBar";
 import Sidebar from "./Sidebar/Sidebar";
 import Skeleton from "./Skeleton/Skeleton";
@@ -17,6 +18,7 @@ export {
 	Navigation,
 	Question,
 	QuestionsList,
+	ScrollTop,
 	SearchBar,
 	Sidebar,
 	Skeleton,

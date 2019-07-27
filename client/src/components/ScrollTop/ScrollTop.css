@@ -1,0 +1,17 @@
+.scrolltop {
+	margin-top: 16px;
+}
+
+.scrolltop p {
+	margin: 0;
+}
+
+.scrolltop i.material-icons {
+	font-size: 16px;
+	transform: rotate(-90deg);
+}
+
+.scrolltop .scroll-btn {
+	padding: 8px;
+	cursor: pointer;
+}

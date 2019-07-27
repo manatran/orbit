@@ -1,5 +1,5 @@
 import React from "react";
-import { Question, Skeleton } from "../index";
+import { Question, ScrollTop, Skeleton } from "../index";
 import { QuestionProps } from "./Question";
 
 interface QuestionsListProps {
@@ -19,17 +19,20 @@ const QuestionsList: React.FC<QuestionsListProps> = ({
 			{error && <QuestionError />}
 
 			{!loading && !error && questions.length > 0 ? (
-				questions.map((el: any) => (
-					<Question
-						key={el.id}
-						id={el.id}
-						title={el.title}
-						subject={el.subject}
-						likes={el.totalLikes}
-						author={el.author}
-						timestamp={el.createdAt}
-					/>
-				))
+				<>
+					{questions.map((el: any) => (
+						<Question
+							key={el.id}
+							id={el.id}
+							title={el.title}
+							subject={el.subject}
+							likes={el.totalLikes}
+							author={el.author}
+							timestamp={el.createdAt}
+						/>
+					))}
+					<ScrollTop />
+				</>
 			) : (
 				<p className="light">No posts yet!</p>
 			)}
