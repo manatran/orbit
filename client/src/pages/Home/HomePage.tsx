@@ -3,7 +3,7 @@ import { Header, QuestionsList, Sidebar, Skeleton } from "../../components";
 import { useFetch } from "../../hooks";
 
 const HomePage: React.FC = () => {
-	const [{ data, loading, error }] = useFetch("/posts", []);
+	const [{ data, loading, error }] = useFetch("/posts/recent", []);
 
 	return (
 		<React.Fragment>
