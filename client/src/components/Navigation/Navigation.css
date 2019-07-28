@@ -136,6 +136,10 @@ nav .dropdown:last-of-type .list {
 	right: 16px;
 }
 
+nav .dropdown .favorites i.material-icons {
+	color: var(--main);
+}
+
 @media only screen and (max-width: 720px) {
 	nav .dropdown {
 		width: auto !important;

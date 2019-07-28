@@ -10,6 +10,7 @@ import Sidebar from "./Sidebar/Sidebar";
 import Skeleton from "./Skeleton/Skeleton";
 import Spinner from "./Spinner/Spinner";
 import Sub from "./Sub/Sub";
+import SubmissionsList from "./Submissions/SubmissionsList";
 
 export {
 	AuthButtons,
@@ -24,4 +25,5 @@ export {
 	Skeleton,
 	Spinner,
 	Sub,
+	SubmissionsList,
 };

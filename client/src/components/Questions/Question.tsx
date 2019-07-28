@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { getTimeDifference } from "../../helpers";
 
 import "./Question.css";
 
@@ -16,7 +17,7 @@ export interface QuestionProps {
 		username: string;
 		isAdmin: boolean;
 	};
-	timestamp: Date;
+	timestamp: string;
 }
 
 const Question: React.FC<QuestionProps> = ({
@@ -42,7 +43,7 @@ const Question: React.FC<QuestionProps> = ({
 					)}{" "}
 					{author.username}
 				</p>
-				<p>8 minutes ago</p>
+				<p title={timestamp}>{getTimeDifference(timestamp)}</p>
 			</div>
 		</Link>
 	);

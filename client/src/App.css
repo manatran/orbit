@@ -40,6 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
 	font-size: 16px;
+	margin-top: 0;
 }
 
 h2.small {
@@ -54,6 +55,10 @@ a {
 	text-decoration: none;
 	color: var(--text-light);
 }
+.link {
+	color: var(--main);
+}
+
 button:focus{
 	outline: none;
 }
@@ -145,6 +150,10 @@ p.light {
 }
 .wrap {
 	flex-wrap: wrap;
+}
+
+.spaced-bottom {
+	margin-bottom: 32px;
 }
 
 @media only screen and (max-width: 720px) {

@@ -8,7 +8,7 @@
 .skeleton-img {
 	width: 64px;
 	height: 64px;
-	background-color: var(--skeleton-bg);
+	background-color: var(--skeleton-fg);
 	margin-right: 16px;
 }
 
@@ -19,7 +19,7 @@
 	display: block;
 	margin: 0;
 	margin-bottom: 8px;
-	background-image: linear-gradient(to right, var(--skeleton-bg), var(--skeleton-fg));
+	background-image: linear-gradient(to right, var(--skeleton-fg), var(--skeleton-bg));
 }
 
 .skeleton-title {
