@@ -16,6 +16,7 @@ header h1 {
 	font-family: "Segoe UI", sans-serif;
 }
 header h2 {
+	margin: 16px 0;
 	font-size: 20px;
 }
 header p {

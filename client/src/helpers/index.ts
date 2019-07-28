@@ -18,3 +18,9 @@ export const getTimeDifference = (timestamp: string): string => {
 	if (days < 1) return `${dateDiff.getHours()} hours ago`;
 	return `${days} days ago`;
 };
+
+export const isEmpty = (value: any) =>
+	value === undefined ||
+	value === null ||
+	(typeof value === "object" && Object.keys(value).length === 0) ||
+	(typeof value === "string" && value.trim().length === 0);

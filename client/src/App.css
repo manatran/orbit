@@ -59,6 +59,14 @@ a {
 	color: var(--main);
 }
 
+.card {
+	padding: 16px;
+	border-radius: 4px;
+	box-sizing: border-box;
+	background-color: white;
+	border: solid 1px var(--light-grey);
+}
+
 button:focus{
 	outline: none;
 }

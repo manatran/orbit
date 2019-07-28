@@ -10,7 +10,7 @@ import { useFetch } from "../../hooks";
 
 const HomePage: React.FC = () => {
 	return (
-		<React.Fragment>
+		<>
 			<Header />
 			<div className="body row">
 				<Sidebar />
@@ -19,7 +19,7 @@ const HomePage: React.FC = () => {
 					<TrendingQuestions />
 				</main>
 			</div>
-		</React.Fragment>
+		</>
 	);
 };
 export default HomePage;

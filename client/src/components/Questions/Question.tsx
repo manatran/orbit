@@ -29,7 +29,7 @@ const Question: React.FC<QuestionProps> = ({
 	timestamp,
 }) => {
 	return (
-		<Link to={`/question/${id}`} className="question row a-centered">
+		<Link to={`/question/${id}`} className="question card row a-centered">
 			<div
 				style={{ backgroundImage: `url(${subject.thumbnail})` }}
 				className="thumbnail"

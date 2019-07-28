@@ -1,4 +1,5 @@
 import AuthButtons from "./AuthButtons/AuthButtons";
+import AuthCard from "./AuthCard/AuthCard";
 import Header from "./Header/Header";
 import Logo from "./Logo/Logo";
 import Navigation from "./Navigation/Navigation";
@@ -14,6 +15,7 @@ import SubmissionsList from "./Submissions/SubmissionsList";
 
 export {
 	AuthButtons,
+	AuthCard,
 	Header,
 	Logo,
 	Navigation,
