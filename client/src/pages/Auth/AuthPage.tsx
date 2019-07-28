@@ -1,6 +1,13 @@
 import React from "react";
+import { AuthCard, Header } from "../../components";
 
 const AuthPage: React.FC = () => {
-	return <div>hello auth</div>;
+	return (
+		<div className="body centered">
+			<main>
+				<AuthCard />
+			</main>
+		</div>
+	);
 };
 export default AuthPage;

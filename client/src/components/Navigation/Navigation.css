@@ -136,6 +136,21 @@ nav .dropdown:last-of-type .list {
 	right: 16px;
 }
 
+nav .dropdown .favorites i.material-icons {
+	color: var(--main);
+}
+
+nav .button.signup {
+	margin: 0;
+	margin-left: 8px;
+	padding: 8px 0;
+	width: 90px;
+	font-size: 14px;
+	font-weight: 400;
+	color: var(--text-lighter);
+	border-color: var(--text-lighter);
+}
+
 @media only screen and (max-width: 720px) {
 	nav .dropdown {
 		width: auto !important;

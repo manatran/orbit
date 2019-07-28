@@ -6,7 +6,11 @@ import UserDropdown from "./UserDropdown";
 
 import "./Navigation.css";
 
-const Navigation: React.FC = () => {
+interface NavigationProps {
+	auth?: any;
+}
+
+const Navigation: React.FC<NavigationProps> = ({ auth }) => {
 	return (
 		<nav className="row a-centered j-between">
 			<Link to="/" className="logo row centered">
@@ -30,9 +34,13 @@ const Navigation: React.FC = () => {
 					<i className="material-icons">create</i>
 				</Link>
 			</section>
-
-			<UserDropdown />
+			{/* TODO: make dynamic */}
+			{/* <UserDropdown /> */}
+			<Link to="/signup" className="button light signup">
+				Sign up
+			</Link>
 		</nav>
 	);
 };
+
 export default Navigation;

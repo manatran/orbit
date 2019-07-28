@@ -28,12 +28,19 @@ body {
 	background: var(--bg);
 }
 
+main {
+	width: 100%;
+	padding: 16px;
+	box-sizing: border-box;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Segoe UI", "Roboto", sans-serif;
+	font-family: "Segoe UI", "Roboto", sans-serif;
 }
 
 h2 {
-  font-size: 16px;
+	font-size: 16px;
+	margin-top: 0;
 }
 
 h2.small {
@@ -48,36 +55,48 @@ a {
 	text-decoration: none;
 	color: var(--text-light);
 }
+.link {
+	color: var(--main);
+}
+
+.card {
+	padding: 16px;
+	border-radius: 4px;
+	box-sizing: border-box;
+	background-color: white;
+	border: solid 1px var(--light-grey);
+}
+
 button:focus{
-  outline: none;
+	outline: none;
 }
 .button {
-  cursor: pointer;
-  outline: none;
-  margin-bottom: 16px;
-  font-weight: 700;
-  text-align: center;
-  border-radius: 4px;
-  max-width: 100%;
-  width: 250px;
-  padding: 16px;
-  box-sizing: border-box;
-  color: white;
-  background-color: var(--main);
-  border: solid 1px var(--main);
+	cursor: pointer;
+	outline: none;
+	margin-bottom: 16px;
+	font-weight: 700;
+	text-align: center;
+	border-radius: 4px;
+	max-width: 100%;
+	width: 250px;
+	padding: 16px;
+	box-sizing: border-box;
+	color: white;
+	background-color: var(--main);
+	border: solid 1px var(--main);
 }
 .button.small {
 	padding: 8px;
 	width: 150px;
 }
 .button.light {
-  color: #40a3e6;
-  background-color: transparent;
+	color: #40a3e6;
+	background-color: transparent;
 }
 .button.danger {
-  background-color: transparent;
-  border: solid 1px var(--danger);
-  color: var(--danger);
+	background-color: transparent;
+	border: solid 1px var(--danger);
+	color: var(--danger);
 }
 .button.disabled {
 	opacity: 0.8;
@@ -87,18 +106,18 @@ button:focus{
 
 p.error {
 	font-size: 14px;
-  color: var(--danger);
+	color: var(--danger);
 }
 p.success {
 	font-size: 14px;
-  color: var(--main) !important;
+	color: var(--main) !important;
 }
 p.light {
 	font-size: 12px;
-	color:  var(--text-lightest);
+	color: var(--text-lightest);
 }
 .danger {
-  color: var(--danger);
+	color: var(--danger);
 }
 
 .rounded {
@@ -139,6 +158,10 @@ p.light {
 }
 .wrap {
 	flex-wrap: wrap;
+}
+
+.spaced-bottom {
+	margin-bottom: 32px;
 }
 
 @media only screen and (max-width: 720px) {
