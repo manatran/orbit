@@ -1,16 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Logo, SearchBar } from "../index";
+import { Logo, Menu, SearchBar } from "../index";
 import NavigationDropdown from "./NavigationDropdown";
 import UserDropdown from "./UserDropdown";
 
 import "./Navigation.css";
 
-interface NavigationProps {
-	auth?: any;
-}
-
-const Navigation: React.FC<NavigationProps> = ({ auth }) => {
+const Navigation: React.FC = () => {
 	return (
 		<nav className="row a-centered j-between">
 			<Link to="/" className="logo row centered">
@@ -21,18 +17,7 @@ const Navigation: React.FC<NavigationProps> = ({ auth }) => {
 			<SearchBar />
 
 			<section className="links row sm-hide">
-				<Link to="/" className="centered" title="Feed">
-					<i className="material-icons">trending_up</i>
-				</Link>
-				<Link to="/challenges" className="centered" title="Challenges">
-					<i className="material-icons">important_devices</i>
-				</Link>
-				<Link to="/suggestions" className="centered" title="Suggestions">
-					<i className="material-icons">wb_incandescent</i>
-				</Link>
-				<Link to="/submit" className="create centered" title="Create post">
-					<i className="material-icons">create</i>
-				</Link>
+				<Menu />
 			</section>
 			{/* TODO: make dynamic */}
 			{/* <UserDropdown /> */}

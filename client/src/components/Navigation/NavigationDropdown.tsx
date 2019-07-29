@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import Dropdown from "../Dropdown/Dropdown";
+import { Menu } from "../index";
 
 const NavigationDropdown: React.FC = () => {
 	return (
@@ -30,21 +31,12 @@ const NavigationDropdownList = () => {
 		<>
 			<section className="menu">
 				<h2 className="small">Navigation</h2>
-				<Link to="/challenges" className="row a-centered">
-					<i className="material-icons icon">important_devices</i>
-					Challenges
-				</Link>
-				<Link to="/suggestions" className="row a-centered">
-					<i className="material-icons icon">wb_incandescent</i>
-					Suggestions
-				</Link>
-				<Link to="/ask" className="link row a-centered">
-					<i className="material-icons icon">create</i>
-					Create post
-				</Link>
+				<Menu />
 			</section>
 
-			{/* <section className="favorites">
+			{/* TODO: show when authenticated */}
+
+			<section className="favorites">
 				<h2 className="small">Favorites</h2>
 				<div className="row a-centered j-between">
 					<Link to="/challenges" className="row a-centered">
@@ -91,7 +83,7 @@ const NavigationDropdownList = () => {
 						favorite
 					</i>
 				</div>
-			</section> */}
+			</section>
 		</>
 	);
 };

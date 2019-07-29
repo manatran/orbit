@@ -2,6 +2,7 @@ import AuthButtons from "./AuthButtons/AuthButtons";
 import AuthCard from "./AuthCard/AuthCard";
 import Header from "./Header/Header";
 import Logo from "./Logo/Logo";
+import Menu from "./Navigation/Menu";
 import Navigation from "./Navigation/Navigation";
 import Question from "./Questions/Question";
 import QuestionsList from "./Questions/QuestionsList";
@@ -19,6 +20,7 @@ export {
 	AuthCard,
 	Header,
 	Logo,
+	Menu,
 	Navigation,
 	Question,
 	QuestionsList,

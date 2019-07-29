@@ -35,6 +35,10 @@ nav .links {
 	border-right: solid 1px var(--light-grey);
 }
 
+nav .links span {
+	display: none;
+}
+
 nav .links i {
 	padding: 4px;
 	font-size: 20px;
@@ -87,7 +91,7 @@ nav .dropdown .list {
 }
 
 nav .dropdown .list a {
-	margin: 8px 0;
+	margin: 12px 0;
 }
 
 nav .dropdown .sub i {
