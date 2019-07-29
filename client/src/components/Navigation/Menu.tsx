@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 const Menu: React.FC = () => {
 	return (
 		<>
+			<Link to="/challenges" className="row a-centered" title="Feed">
+				<i className="material-icons icon">trending_up</i>
+				<span>Feed</span>
+			</Link>
 			<Link to="/challenges" className="row a-centered" title="Challenges">
 				<i className="material-icons icon">important_devices</i>
 				<span>Challenges</span>
