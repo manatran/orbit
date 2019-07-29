@@ -17,15 +17,15 @@ const Submission: React.FC<SubmissionProps> = ({
 	subtitle,
 }) => {
 	return (
-		<Link to={`/submission/${id}`} className="submission">
+		<Link
+			to={`/submission/${id}`}
+			className="submission"
+			style={{ backgroundImage: `url(${background})` }}
+		>
 			<div className="meta sm-hide">
 				<h2>{title}</h2>
 				<p>{subtitle}</p>
 			</div>
-			<div
-				className="thumbnail"
-				style={{ backgroundImage: `url(${background})` }}
-			/>
 		</Link>
 	);
 };

@@ -1,5 +1,4 @@
 import React from "react";
-import AddSubmission from "./AddSubmission";
 import Submission, { SubmissionProps } from "./Submission";
 
 import "./Submission.css";
@@ -26,7 +25,6 @@ const SubmissionsList: React.FC<SubmissionsListProps> = ({
 					subtitle={el.contest.title}
 				/>
 			))}
-			<AddSubmission />
 		</div>
 	) : null;
 };

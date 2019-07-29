@@ -27,7 +27,7 @@ const NavigationDropdownButton = () => {
 
 const NavigationDropdownList = () => {
 	return (
-		<React.Fragment>
+		<>
 			<section className="menu">
 				<h2 className="small">Navigation</h2>
 				<Link to="/challenges" className="row a-centered">
@@ -38,9 +38,13 @@ const NavigationDropdownList = () => {
 					<i className="material-icons icon">wb_incandescent</i>
 					Suggestions
 				</Link>
+				<Link to="/ask" className="link row a-centered">
+					<i className="material-icons icon">create</i>
+					Create post
+				</Link>
 			</section>
 
-			<section className="favorites">
+			{/* <section className="favorites">
 				<h2 className="small">Favorites</h2>
 				<div className="row a-centered j-between">
 					<Link to="/challenges" className="row a-centered">
@@ -87,7 +91,7 @@ const NavigationDropdownList = () => {
 						favorite
 					</i>
 				</div>
-			</section>
-		</React.Fragment>
+			</section> */}
+		</>
 	);
 };

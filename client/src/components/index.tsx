@@ -11,6 +11,7 @@ import Sidebar from "./Sidebar/Sidebar";
 import Skeleton from "./Skeleton/Skeleton";
 import Spinner from "./Spinner/Spinner";
 import Sub from "./Sub/Sub";
+import AddSubmission from "./Submissions/AddSubmission";
 import SubmissionsList from "./Submissions/SubmissionsList";
 
 export {
@@ -27,5 +28,6 @@ export {
 	Skeleton,
 	Spinner,
 	Sub,
+	AddSubmission,
 	SubmissionsList,
 };

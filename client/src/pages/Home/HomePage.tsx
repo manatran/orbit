@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
+	AddSubmission,
 	Header,
 	QuestionsList,
 	Sidebar,
@@ -29,7 +30,10 @@ const PopularSubmissions = () => {
 	return (
 		<div className="popular-submissions spaced-bottom">
 			<h2>Recent submissions</h2>
-			<SubmissionsList submissions={data} loading={loading} error={error} />
+			<div className="row spaced-bottom">
+				<AddSubmission />
+				<SubmissionsList submissions={data} loading={loading} error={error} />
+			</div>
 			<Link className="link row a-centered" to="/submissions">
 				Show all submissions{" "}
 				<i className="material-icons">keyboard_arrow_right</i>
