@@ -1,0 +1,23 @@
+.subheader {
+	display: block;
+	padding: 32px;
+	background-color: var(--main);
+	margin-top: 44px;
+	color: white;
+}
+
+.subheader img {
+	height: 64px;
+	margin-right: 16px;
+	border-radius: 4px;
+}
+
+.subheader p,
+.subheader h2 {
+	margin: 0;
+}
+
+.subheader p {
+	font-size: 14px;
+	margin-top: 4px;
+}

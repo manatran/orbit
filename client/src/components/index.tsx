@@ -12,6 +12,7 @@ import Sidebar from "./Sidebar/Sidebar";
 import Skeleton from "./Skeleton/Skeleton";
 import Spinner from "./Spinner/Spinner";
 import Sub from "./Sub/Sub";
+import SubHeader from "./Sub/SubHeader";
 import AddSubmission from "./Submissions/AddSubmission";
 import SubmissionsList from "./Submissions/SubmissionsList";
 
@@ -30,6 +31,7 @@ export {
 	Skeleton,
 	Spinner,
 	Sub,
+	SubHeader,
 	AddSubmission,
 	SubmissionsList,
 };

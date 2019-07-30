@@ -18,7 +18,7 @@ const QuestionsList: React.FC<QuestionsListProps> = ({
 			{loading && <QuestionSkeleton />}
 			{error && <QuestionError />}
 
-			{!loading && !error && questions.length > 0 ? (
+			{!loading && !error && questions && questions.length > 0 ? (
 				<>
 					{questions.map((el: any) => (
 						<Question

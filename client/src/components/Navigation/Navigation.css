@@ -130,10 +130,6 @@ nav .user .rep {
 	color: var(--main);
 }
 
-nav .menu [title="Feed"]{
-	display: none;
-}
-
 nav .dropdown:last-of-type,
 nav .dropdown:last-of-type button {
 	width: auto !important;
