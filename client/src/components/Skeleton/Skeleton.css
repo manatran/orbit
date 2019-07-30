@@ -1,13 +1,19 @@
+.skeleton-img,
+.skeleton-text,
+.skeleton-title {
+	--skeleton-bg: rgba(0,0,0,0.05);
+	--skeleton-fg: rgba(0,0,0,0.1);
+}
+
 .skeleton-container {
 	margin-bottom: 32px;
 	width: 100%;
-	--skeleton-bg: #efefef;
-	--skeleton-fg: #dfdfdf;
 }
 
 .skeleton-img {
 	width: 64px;
 	height: 64px;
+	border-radius: 4px;
 	background-color: var(--skeleton-fg);
 	margin-right: 16px;
 }
@@ -15,6 +21,7 @@
 .skeleton-title,
 .skeleton-text {
 	height: 20px;
+	border-radius: 4px;
 	background-color: var(--skeleton-bg);
 	display: block;
 	margin: 0;
@@ -29,4 +36,7 @@
 
 .skeleton-text {
 	width: 300px;
+}
+.skeleton-text:last-of-type {
+	margin-bottom: 0;
 }

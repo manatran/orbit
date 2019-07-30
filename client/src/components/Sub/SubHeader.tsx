@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useFetch } from "../../hooks";
+import { SkeletonImg, SkeletonText, SkeletonTitle } from "../index";
 
 import "./SubHeader.css";
 
@@ -10,6 +11,20 @@ interface HeaderProps {
 
 const SubHeader: React.FC<HeaderProps> = ({ slug }) => {
 	const [{ data }] = useFetch(`/categories/${slug}`, null);
+
+	if (!data) {
+		return (
+			<div className="subheader">
+				<div className="row a-centered">
+					<SkeletonImg />
+					<div className="column">
+						<SkeletonTitle />
+						<SkeletonText />
+					</div>
+				</div>
+			</div>
+		);
+	}
 
 	if (data) {
 		const { thumbnail, name, description } = data;

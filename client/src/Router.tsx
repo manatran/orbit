@@ -6,6 +6,7 @@ import {
 	CallbackPage,
 	HomePage,
 	PrivacyPage,
+	QuestionDetailPage,
 	QuestionsOverviewPage,
 	SignoutPage,
 	TermsPage,
@@ -27,6 +28,7 @@ const AppRouter: React.FC = () => {
 
 				{/* Questions */}
 				<Route exact path="/subject/:slug" component={QuestionsOverviewPage} />
+				<Route exact path="/question/:id" component={QuestionDetailPage} />
 
 				{/* Static */}
 				<Route exact path="/terms" component={TermsPage} />

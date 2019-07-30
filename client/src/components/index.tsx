@@ -10,6 +10,9 @@ import ScrollTop from "./ScrollTop/ScrollTop";
 import SearchBar from "./SearchBar/SearchBar";
 import Sidebar from "./Sidebar/Sidebar";
 import Skeleton from "./Skeleton/Skeleton";
+import SkeletonImg from "./Skeleton/SkeletonImg";
+import SkeletonText from "./Skeleton/SkeletonText";
+import SkeletonTitle from "./Skeleton/SkeletonTitle";
 import Spinner from "./Spinner/Spinner";
 import Sub from "./Sub/Sub";
 import SubHeader from "./Sub/SubHeader";
@@ -29,6 +32,9 @@ export {
 	SearchBar,
 	Sidebar,
 	Skeleton,
+	SkeletonImg,
+	SkeletonText,
+	SkeletonTitle,
 	Spinner,
 	Sub,
 	SubHeader,
