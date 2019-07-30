@@ -7,6 +7,9 @@ const PrivacyPage = () => {
 		<div className="body spaced row">
 			<Sidebar />
 			<main style={{ maxWidth: `720px`, margin: `0 auto` }}>
+				<p className="light">
+					This policy is placeholder text and not binding.
+				</p>
 				<h2 id="privacy">Privacy Policy</h2>
 				<p>
 					Placeholder.com is operated by Quality Nonsense Ltd. Your privacy is

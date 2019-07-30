@@ -7,6 +7,9 @@ const TermsPage = () => {
 		<div className="body spaced row">
 			<Sidebar />
 			<main style={{ maxWidth: `720px`, margin: `0 auto` }}>
+				<p className="light">
+					These terms are placeholder text and not binding.
+				</p>
 				<h2 id="terms">Terms of Use (the “Terms”)</h2>
 				<p>
 					We are <Link to="/">Orbit</Link>, a company registered in England and
