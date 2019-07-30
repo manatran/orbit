@@ -43,7 +43,9 @@ const Question: React.FC<QuestionProps> = ({
 					)}{" "}
 					{author.username}
 				</p>
-				<p title={timestamp}>{getTimeDifference(timestamp)}</p>
+				<p className="light" title={timestamp}>
+					{getTimeDifference(timestamp)}
+				</p>
 			</div>
 		</Link>
 	);

@@ -6,13 +6,13 @@ import { SkeletonImg, SkeletonText, SkeletonTitle } from "../index";
 import "./SubHeader.css";
 
 interface HeaderProps {
-	slug: string;
+	slug?: string;
 }
 
 const SubHeader: React.FC<HeaderProps> = ({ slug }) => {
 	const [{ data }] = useFetch(`/categories/${slug}`, null);
 
-	if (!data) {
+	if (!data || !slug) {
 		return (
 			<div className="subheader">
 				<div className="row a-centered">

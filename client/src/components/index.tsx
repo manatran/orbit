@@ -5,6 +5,7 @@ import Logo from "./Logo/Logo";
 import Menu from "./Navigation/Menu";
 import Navigation from "./Navigation/Navigation";
 import Question from "./Questions/Question";
+import QuestionDetail from "./Questions/QuestionDetail";
 import QuestionsList from "./Questions/QuestionsList";
 import ScrollTop from "./ScrollTop/ScrollTop";
 import SearchBar from "./SearchBar/SearchBar";
@@ -27,6 +28,7 @@ export {
 	Menu,
 	Navigation,
 	Question,
+	QuestionDetail,
 	QuestionsList,
 	ScrollTop,
 	SearchBar,

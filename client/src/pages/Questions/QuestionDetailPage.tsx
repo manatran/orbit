@@ -1,5 +1,5 @@
-import React from "react";
-import { Sidebar, SubHeader } from "../../components";
+import React, { useEffect } from "react";
+import { QuestionDetail, Sidebar, SubHeader } from "../../components";
 import { useFetch } from "../../hooks";
 
 interface DetailProps {
@@ -11,12 +11,23 @@ interface DetailProps {
 const QuestionDetailPage: React.FC<DetailProps> = ({ match }) => {
 	const id = match.params.id;
 	const [{ data, loading, error }] = useFetch(`/post/${id}`);
+
+	useEffect(() => {
+		if (data) document.title = `${data.title}  |  Orbit`;
+
+		return () => {
+			document.title = "Orbit";
+		};
+	}, [data]);
+
 	return (
 		<>
-			<SubHeader slug="javascript" />
+			<SubHeader slug={(data && data.subject.slug) || null} />
 			<div className="body row">
 				<Sidebar />
-				<main>{data && data.title}</main>
+				<main>
+					<QuestionDetail question={data} loading={loading} error={error} />
+				</main>
 			</div>
 		</>
 	);
