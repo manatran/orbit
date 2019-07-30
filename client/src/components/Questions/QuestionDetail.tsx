@@ -50,14 +50,10 @@ const QuestionDetail: React.FC<DetailProps> = ({
 				<h2>{question.title}</h2>
 				<p className="author light" title={question.createdAt}>
 					Posted {getTimeDifference(question.createdAt)} by{" "}
-					{author.isAdmin ? (
-						<Link className="link" to={`/user/${author.username}`}>
-							<i className="material-icons">verified_user</i>
-							{author.username}
-						</Link>
-					) : (
-						<Link to={`/user/${author.username}`}>{author.username}</Link>
-					)}
+					<Link className="link" to={`/user/${author.username}`}>
+						{author.isAdmin && <i className="material-icons">verified_user</i>}
+						{author.username}
+					</Link>
 				</p>
 
 				<div className="row a-centered">

@@ -17,7 +17,7 @@ const UserDropdown: React.FC<UserProps> = ({ user }) => {
 		<Dropdown
 			width="150px"
 			button={<UserDropdownButton user={user} />}
-			list={<UserDropdownList />}
+			list={<UserDropdownList user={user} />}
 		/>
 	);
 };
@@ -42,12 +42,12 @@ const UserDropdownButton: React.FC<UserProps> = ({ user }) => {
 	);
 };
 
-const UserDropdownList = () => {
+const UserDropdownList: React.FC<UserProps> = ({ user }) => {
 	return (
 		<React.Fragment>
 			<section className="menu">
 				<h2 className="small">Options</h2>
-				<Link to="/user/manatran" className="row a-centered">
+				<Link to={`/user/${user.profile.username}`} className="row a-centered">
 					<i className="material-icons icon">account_circle</i>
 					Profile
 				</Link>
