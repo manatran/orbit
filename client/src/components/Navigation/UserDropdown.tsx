@@ -2,27 +2,37 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Dropdown from "../Dropdown/Dropdown";
 
-const UserDropdown: React.FC = () => {
+interface UserProps {
+	user: {
+		avatar_url: string;
+		profile: {
+			rep: number;
+			username: string;
+		};
+	};
+}
+
+const UserDropdown: React.FC<UserProps> = ({ user }) => {
 	return (
 		<Dropdown
 			width="150px"
-			button={<UserDropdownButton />}
+			button={<UserDropdownButton user={user} />}
 			list={<UserDropdownList />}
 		/>
 	);
 };
 export default UserDropdown;
 
-const UserDropdownButton = () => {
+const UserDropdownButton: React.FC<UserProps> = ({ user }) => {
 	return (
 		<React.Fragment>
 			<span className="row a-centered j-end" style={{ alignSelf: "flex-end" }}>
 				<div className="user column a-end sm-hide">
-					<span className="username">manatran</span>
-					<span className="rep">800 rep</span>
+					<span className="username">{user.profile.username}</span>
+					<span className="rep">{user.profile.rep || 0} rep</span>
 				</div>
 				<img
-					src="https://avatars1.githubusercontent.com/u/22441701?s=460&v=4"
+					src={user.avatar_url}
 					alt="Profile"
 					className="profile-pic rounded"
 				/>

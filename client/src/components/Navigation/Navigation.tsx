@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { Logo, Menu, SearchBar } from "../index";
 import NavigationDropdown from "./NavigationDropdown";
@@ -6,7 +7,11 @@ import UserDropdown from "./UserDropdown";
 
 import "./Navigation.css";
 
-const Navigation: React.FC = () => {
+interface NavProps {
+	auth: any;
+}
+
+const Navigation: React.FC<NavProps> = ({ auth }) => {
 	return (
 		<nav className="row a-centered j-between">
 			<Link to="/" className="logo row centered">
@@ -19,13 +24,19 @@ const Navigation: React.FC = () => {
 			<section className="links row sm-hide">
 				<Menu />
 			</section>
-			{/* TODO: make dynamic */}
-			{/* <UserDropdown /> */}
-			<Link to="/signup" className="button light signup">
-				Sign up
-			</Link>
+			{auth ? (
+				<UserDropdown user={auth.user} />
+			) : (
+				<Link to="/signup" className="button light signup">
+					Sign up
+				</Link>
+			)}
 		</nav>
 	);
 };
 
-export default Navigation;
+const mapStateToProps = (store: any) => ({
+	auth: store.auth,
+});
+
+export default connect(mapStateToProps)(Navigation);

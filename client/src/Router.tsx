@@ -3,6 +3,7 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import { Navigation } from "./components";
 import {
 	AuthPage,
+	CallbackPage,
 	HomePage,
 	PrivacyPage,
 	QuestionsOverviewPage,
@@ -14,12 +15,13 @@ const AppRouter: React.FC = () => {
 		<React.Fragment>
 			<Navigation />
 			<Switch>
-				<Route exact path="/" component={HomePage} />
 				<Redirect from="/home" to="/" />
+				<Route exact path="/" component={HomePage} />
 
 				{/* Authentication */}
-				<Route exact path="/signup" component={AuthPage} />
 				<Redirect from="/login" to="/signup" />
+				<Route exact path="/signup" component={AuthPage} />
+				<Route exact path="/callback" component={CallbackPage} />
 
 				{/* Questions */}
 				<Route exact path="/subject/:slug" component={QuestionsOverviewPage} />
