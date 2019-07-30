@@ -24,7 +24,7 @@ const Navigation: React.FC<NavProps> = ({ auth }) => {
 			<section className="links row sm-hide">
 				<Menu />
 			</section>
-			{auth ? (
+			{auth.authenticated ? (
 				<UserDropdown user={auth.user} />
 			) : (
 				<Link to="/signup" className="button light signup">

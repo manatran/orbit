@@ -10,7 +10,6 @@ interface CallbackProps {
 	location: {
 		search: any;
 	};
-	history: any;
 	authenticated: boolean;
 	saveCurrentUser: (value: any) => Dispatch;
 	saveToken: (value: string) => Dispatch;
@@ -18,7 +17,6 @@ interface CallbackProps {
 
 const CallbackPage: React.FC<CallbackProps> = ({
 	location,
-	history,
 	authenticated,
 	saveCurrentUser,
 	saveToken,
@@ -30,9 +28,8 @@ const CallbackPage: React.FC<CallbackProps> = ({
 		if (data) {
 			saveToken(`Bearer ${token}`);
 			saveCurrentUser(data);
-			history.push("/");
 		}
-	}, [data, history, saveCurrentUser, saveToken]);
+	}, [data, saveCurrentUser, saveToken]);
 
 	return (
 		<main style={{ marginTop: `64px` }}>
