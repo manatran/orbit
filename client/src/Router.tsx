@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { Navigation } from "./components";
-import { AuthPage, HomePage } from "./pages";
+import { AuthPage, HomePage, PrivacyPage, TermsPage } from "./pages";
 
 const AppRouter: React.FC = () => {
 	return (
@@ -10,8 +10,14 @@ const AppRouter: React.FC = () => {
 			<Switch>
 				<Route exact path="/" component={HomePage} />
 				<Redirect from="/home" to="/" />
+
+				{/* Authentication */}
 				<Route exact path="/signup" component={AuthPage} />
 				<Redirect from="/login" to="/signup" />
+
+				{/* Static */}
+				<Route exact path="/terms" component={TermsPage} />
+				<Route exact path="/privacy" component={PrivacyPage} />
 			</Switch>
 		</React.Fragment>
 	);

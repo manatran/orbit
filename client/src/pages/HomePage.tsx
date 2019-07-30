@@ -6,8 +6,8 @@ import {
 	QuestionsList,
 	Sidebar,
 	SubmissionsList,
-} from "../../components";
-import { useFetch } from "../../hooks";
+} from "../components";
+import { useFetch } from "../hooks";
 
 const HomePage: React.FC = () => {
 	return (

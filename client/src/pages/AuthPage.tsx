@@ -1,5 +1,5 @@
 import React from "react";
-import { AuthCard, Header } from "../../components";
+import { AuthCard } from "../components";
 
 const AuthPage: React.FC = () => {
 	return (

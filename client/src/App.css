@@ -59,6 +59,10 @@ a {
 	color: var(--main);
 }
 
+.body.spaced {
+	margin-top: 44px;
+}
+
 .card {
 	padding: 16px;
 	border-radius: 4px;

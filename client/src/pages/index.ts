@@ -1,4 +1,6 @@
-import AuthPage from "./Auth/AuthPage";
-import HomePage from "./Home/HomePage";
+import AuthPage from "./AuthPage";
+import HomePage from "./HomePage";
+import PrivacyPage from "./PrivacyPage";
+import TermsPage from "./TermsPage";
 
-export { AuthPage, HomePage };
+export { AuthPage, HomePage, PrivacyPage, TermsPage };
