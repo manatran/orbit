@@ -12,14 +12,17 @@
 }
 
 .question-detail .likes {
+	border: solid 1px transparent;
 	cursor: pointer;
 	background: none;
-	border: solid 1px var(--light-grey);
 	padding: 4px;
 	color: var(--text-lighter);
 	border-radius: 4px;
 	font-size: 16px;
 	margin-right: 16px;
+}
+.question-detail .likes:hover {
+	border: solid 1px var(--light-grey);
 }
 .question-detail .liked {
 	border-color: white;

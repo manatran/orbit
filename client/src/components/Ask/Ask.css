@@ -1,0 +1,56 @@
+.ask.card {
+	padding: 32px;
+	max-width: 720px;
+	margin: 0 auto;
+}
+
+.ask h2 {
+	margin-bottom: 32px;
+}
+
+.ask form {
+	max-width: 720px;
+}
+
+.ask input,
+.ask textarea,
+.ask .select-container {
+	color: var(--text-light);
+	border: solid 1px var(--light-grey);
+	border-radius: 4px;
+	padding: 16px;
+	margin-bottom: 16px;
+	box-sizing: border-box;
+}
+
+.ask .select-container {
+	margin-bottom: 32px;
+	padding: 0 16px;
+}
+
+.ask textarea {
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 256px;
+}
+
+.ask select {
+	color: var(--text-light);
+	padding: 16px 0;
+	border: none;
+	width: 100%;
+}
+
+.ask select:focus {
+	outline: none;
+}
+
+.ask .select-container .thumbnail {
+	height: 24px;
+	width: 24px;
+	border: dashed 1px var(--text-lighter);
+	background-size: contain;
+	background-position: center;
+	border-radius: 4px;
+	margin-right: 16px;
+}

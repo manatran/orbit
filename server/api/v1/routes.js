@@ -43,6 +43,7 @@ router.get("/posts", postController.get_posts);
 router.get("/posts/recent", postController.get_recent_posts);
 router.get("/posts/author/:authorId", postController.get_posts_by_author);
 router.post("/posts", auth.authenticateJWT(), postController.create_post);
+router.post("/posts/like/:id", auth.authenticateJWT(), postController.like_post);
 router.get("/post/:id", postController.get_post);
 router.patch("/posts/:id", auth.authenticateJWT(), postController.update_post);
 router.delete("/posts/:id", auth.authenticateJWT(), postController.delete_post);
@@ -60,6 +61,8 @@ router.post(
 	auth.authenticateJWT(),
 	submissionController.create_submission
 );
+
+router.post("/submissions/like/:id", auth.authenticateJWT(), submissionController.like_submission);
 router.get("/submission/:id", submissionController.get_submission);
 router.patch(
 	"/submissions/:id",

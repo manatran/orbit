@@ -1,3 +1,4 @@
+import Ask from "./Ask/Ask";
 import AuthButtons from "./AuthButtons/AuthButtons";
 import AuthCard from "./AuthCard/AuthCard";
 import Header from "./Header/Header";
@@ -21,6 +22,7 @@ import AddSubmission from "./Submissions/AddSubmission";
 import SubmissionsList from "./Submissions/SubmissionsList";
 
 export {
+	Ask,
 	AuthButtons,
 	AuthCard,
 	Header,

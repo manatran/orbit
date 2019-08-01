@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const fetchUrl = "http://localhost:5000/api/v1";
+export const fetchUrl = "http://localhost:5000/api/v1";
 
 export const useFetch = (endpoint: string, initialState?: any) => {
 	const [data, setData] = useState(initialState);

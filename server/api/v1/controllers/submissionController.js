@@ -166,7 +166,8 @@ exports.create_submission = (req, res, next) => {
 		githubUrl: githubUrl,
 		thumbnail: thumbnail,
 		authorId: id,
-		contestId: contestId
+		contestId: contestId,
+		totalLikes: 0,
 	};
 
 	models.Submission.create(args)
@@ -182,6 +183,7 @@ exports.create_submission = (req, res, next) => {
 exports.like_submission = (req, res, next) => {
 	const { id } = req.params;
 	// TODO: check if user has liked submission, then increment/decrement
+
 };
 
 // Update submission

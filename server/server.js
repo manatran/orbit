@@ -3,6 +3,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const auth = require("./api/v1/providers/auth")();
 const v1Routes = require("./api/routes");
+const models = require("./api/v1/models");
 
 const app = express();
 
@@ -22,8 +23,8 @@ app.use("", v1Routes);
 // Launch server
 const port = process.env.PORT || 5000;
 
-// models.sequelize.sync({ force: true }).then(() => {
-app.listen(port, () => {
-	console.log(`Server now running on port ${port}`);
+models.sequelize.sync({ force: true }).then(() => {
+	app.listen(port, () => {
+		console.log(`Server now running on port ${port}`);
+	});
 });
-// });

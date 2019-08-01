@@ -3,6 +3,7 @@ import CallbackPage from "./Auth/CallbackPage";
 import SignoutPage from "./Auth/SignoutPage";
 import HomePage from "./HomePage";
 import PrivacyPage from "./PrivacyPage";
+import AskPage from "./Questions/AskPage";
 import QuestionDetailPage from "./Questions/QuestionDetailPage";
 import QuestionsOverviewPage from "./Questions/QuestionsOverviewPage";
 import TermsPage from "./TermsPage";
@@ -13,6 +14,7 @@ export {
 	SignoutPage,
 	HomePage,
 	PrivacyPage,
+	AskPage,
 	QuestionDetailPage,
 	QuestionsOverviewPage,
 	TermsPage,
