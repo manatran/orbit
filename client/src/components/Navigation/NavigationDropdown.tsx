@@ -1,18 +1,28 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import Dropdown from "../Dropdown/Dropdown";
 import { Menu } from "../index";
 
-const NavigationDropdown: React.FC = () => {
+interface DropdownProps {
+	authenticated: boolean;
+}
+
+const NavigationDropdown: React.FC<DropdownProps> = ({ authenticated }) => {
 	return (
 		<Dropdown
 			button={<NavigationDropdownButton />}
-			list={<NavigationDropdownList />}
+			list={<NavigationDropdownList authenticated={authenticated} />}
 		/>
 	);
 };
-export default NavigationDropdown;
+
+const mapStateToProps = (state: any) => ({
+	authenticated: state.auth.authenticated,
+});
+
+export default connect(mapStateToProps)(NavigationDropdown);
 
 const NavigationDropdownButton = () => {
 	return (
@@ -26,7 +36,7 @@ const NavigationDropdownButton = () => {
 	);
 };
 
-const NavigationDropdownList = () => {
+const NavigationDropdownList: React.FC<DropdownProps> = ({ authenticated }) => {
 	return (
 		<>
 			<section className="menu">
@@ -34,56 +44,68 @@ const NavigationDropdownList = () => {
 				<Menu />
 			</section>
 
-			{/* TODO: show when authenticated */}
+			{/* TODO: Fetch subs */}
+			{authenticated && (
+				<>
+					<section className="favorites">
+						<h2 className="small">Favorites</h2>
+						<div className="row a-centered j-between">
+							<Link to="/challenges" className="row a-centered">
+								<img src={Logo} alt="Challenges" />
+								Subscription
+							</Link>
+							<i
+								className="material-icons fav"
+								onClick={() => console.log("clicked!")}
+							>
+								favorite
+							</i>
+						</div>
+					</section>
 
-			<section className="favorites">
-				<h2 className="small">Favorites</h2>
-				<div className="row a-centered j-between">
-					<Link to="/challenges" className="row a-centered">
-						<img src={Logo} alt="Challenges" />
-						Subscription
-					</Link>
-					<i
-						className="material-icons fav"
-						onClick={() => console.log("clicked!")}
-					>
-						favorite
-					</i>
-				</div>
-			</section>
+					<section className="subscriptions">
+						<h2 className="small">Subscriptions</h2>
+						<div className="row a-centered j-between">
+							<Link to="/challenges" className="row a-centered">
+								<img src={Logo} alt="Challenges" />
+								Subscription
+							</Link>
+							<i
+								className="material-icons"
+								onClick={() => console.log("clicked!")}
+							>
+								favorite
+							</i>
+						</div>
 
-			<section className="subscriptions">
-				<h2 className="small">Subscriptions</h2>
-				<div className="row a-centered j-between">
-					<Link to="/challenges" className="row a-centered">
-						<img src={Logo} alt="Challenges" />
-						Subscription
-					</Link>
-					<i className="material-icons" onClick={() => console.log("clicked!")}>
-						favorite
-					</i>
-				</div>
+						<div className="row a-centered j-between">
+							<Link to="/challenges" className="row a-centered">
+								<img src={Logo} alt="Challenges" />
+								Subscription
+							</Link>
+							<i
+								className="material-icons"
+								onClick={() => console.log("clicked!")}
+							>
+								favorite
+							</i>
+						</div>
 
-				<div className="row a-centered j-between">
-					<Link to="/challenges" className="row a-centered">
-						<img src={Logo} alt="Challenges" />
-						Subscription
-					</Link>
-					<i className="material-icons" onClick={() => console.log("clicked!")}>
-						favorite
-					</i>
-				</div>
-
-				<div className="row a-centered j-between">
-					<Link to="/challenges" className="row a-centered">
-						<img src={Logo} alt="Challenges" />
-						Subscription
-					</Link>
-					<i className="material-icons" onClick={() => console.log("clicked!")}>
-						favorite
-					</i>
-				</div>
-			</section>
+						<div className="row a-centered j-between">
+							<Link to="/challenges" className="row a-centered">
+								<img src={Logo} alt="Challenges" />
+								Subscription
+							</Link>
+							<i
+								className="material-icons"
+								onClick={() => console.log("clicked!")}
+							>
+								favorite
+							</i>
+						</div>
+					</section>
+				</>
+			)}
 		</>
 	);
 };

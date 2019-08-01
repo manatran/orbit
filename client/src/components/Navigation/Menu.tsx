@@ -1,7 +1,17 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
-const Menu: React.FC = () => {
+interface MenuProps {
+	authenticated: boolean;
+	user: {
+		profile: {
+			isAdmin: boolean;
+		};
+	};
+}
+
+const Menu: React.FC<MenuProps> = ({ authenticated, user }) => {
 	return (
 		<>
 			<Link to="/challenges" className="row a-centered" title="Feed">
@@ -16,11 +26,14 @@ const Menu: React.FC = () => {
 				<i className="material-icons icon">wb_incandescent</i>
 				<span>Suggestions</span>
 			</Link>
-			{/* TODO: only when admin */}
-			<Link to="/admin" className="row a-centered" title="Dashboard">
-				<i className="material-icons icon">verified_user</i>
-				<span>Dashboard</span>
-			</Link>
+
+			{authenticated && user.profile.isAdmin && (
+				<Link to="/admin" className="row a-centered" title="Dashboard">
+					<i className="material-icons icon">verified_user</i>
+					<span>Dashboard</span>
+				</Link>
+			)}
+
 			<Link to="/ask" className="link row a-centered" title="Create post">
 				<i className="material-icons icon">create</i>
 				<span>Create post</span>
@@ -28,4 +41,10 @@ const Menu: React.FC = () => {
 		</>
 	);
 };
-export default Menu;
+
+const mapStateToProps = (state: any) => ({
+	authenticated: state.auth.authenticated,
+	user: state.auth.user,
+});
+
+export default connect(mapStateToProps)(Menu);

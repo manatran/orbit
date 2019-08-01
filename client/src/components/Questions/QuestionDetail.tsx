@@ -36,6 +36,10 @@ const QuestionDetail: React.FC<DetailProps> = ({
 	loading,
 	error,
 }) => {
+	const endorse = () => {
+		// TODO: post request to like
+	};
+
 	if (loading) {
 		return (
 			<section className="card">
@@ -45,8 +49,8 @@ const QuestionDetail: React.FC<DetailProps> = ({
 	}
 
 	if (question && !question.error) {
-		const { author, subject } = question;
-		console.log(question);
+		const { author } = question;
+
 		return (
 			<section className="question-detail card">
 				<h2>{question.title}</h2>
@@ -59,7 +63,11 @@ const QuestionDetail: React.FC<DetailProps> = ({
 				</p>
 
 				<div className="row a-centered">
-					<button className="likes row a-centered" title="Endorse this post">
+					<button
+						onClick={() => endorse()}
+						className="likes row a-centered"
+						title="Endorse this post"
+					>
 						<i className="material-icons">stars</i>
 						{question.totalLikes || 0}
 					</button>

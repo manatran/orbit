@@ -15,7 +15,7 @@ const SignoutPage: React.FC<SignoutProps> = ({ signout }) => {
 	useEffect(() => {
 		signout();
 		setRedirect(true);
-	}, []);
+	}, [signout]);
 
 	return (
 		<main style={{ marginTop: `64px` }}>

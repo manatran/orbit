@@ -29,7 +29,7 @@ const CallbackPage: React.FC<CallbackProps> = ({
 			saveToken(`Bearer ${token}`);
 			saveCurrentUser(data);
 		}
-	}, [data, saveCurrentUser, saveToken]);
+	}, [data, token, saveCurrentUser, saveToken]);
 
 	return (
 		<main style={{ marginTop: `64px` }}>
