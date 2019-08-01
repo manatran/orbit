@@ -7,6 +7,7 @@ import "./QuestionDetail.css";
 
 interface DetailProps {
 	question: {
+		error?: any;
 		id: number;
 		title: string;
 		content: string;
@@ -43,8 +44,9 @@ const QuestionDetail: React.FC<DetailProps> = ({
 		);
 	}
 
-	if (question) {
+	if (question && !question.error) {
 		const { author, subject } = question;
+		console.log(question);
 		return (
 			<section className="question-detail card">
 				<h2>{question.title}</h2>

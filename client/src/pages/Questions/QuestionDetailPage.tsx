@@ -13,7 +13,7 @@ const QuestionDetailPage: React.FC<DetailProps> = ({ match }) => {
 	const [{ data, loading, error }] = useFetch(`/post/${id}`);
 
 	useEffect(() => {
-		if (data) document.title = `${data.title}  |  Orbit`;
+		if (data && data.title) document.title = `${data.title}  |  Orbit`;
 
 		return () => {
 			document.title = "Orbit";
@@ -22,7 +22,7 @@ const QuestionDetailPage: React.FC<DetailProps> = ({ match }) => {
 
 	return (
 		<>
-			<SubHeader slug={(data && data.subject.slug) || null} />
+			<SubHeader slug={(data && data.subject && data.subject.slug) || null} />
 			<div className="body row">
 				<Sidebar />
 				<main>
