@@ -1,3 +1,7 @@
+.create-comment {
+	margin-bottom: 16px;
+}
+
 .comment-section .meta {
 	margin-bottom: 16px;
 	color: var(--text-light);

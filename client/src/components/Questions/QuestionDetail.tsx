@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { getTimeDifference } from "../../helpers";
+import { useFetch } from "../../hooks";
 import Skeleton from "../Skeleton/Skeleton";
 
 import "./QuestionDetail.css";
 
 interface DetailProps {
+	id: number;
 	question: {
 		error?: any;
 		id: number;
@@ -32,10 +34,13 @@ interface DetailProps {
 }
 
 const QuestionDetail: React.FC<DetailProps> = ({
+	id,
 	question,
 	loading,
 	error,
 }) => {
+	const [{ data }] = useFetch(`/comments/${id}`, null);
+
 	const endorse = () => {
 		// TODO: post request to like
 	};
@@ -78,8 +83,10 @@ const QuestionDetail: React.FC<DetailProps> = ({
 
 				<div className="row a-centered options">
 					<span className="row a-centered">
-						<i className="material-icons">comments</i>0 comments
+						<i className="material-icons">comments</i>
+						{(data && data.length) || 0} comment(s)
 					</span>
+					{/* TODO: report post */}
 					<span className="row a-centered">
 						<i className="material-icons">report</i>report
 					</span>

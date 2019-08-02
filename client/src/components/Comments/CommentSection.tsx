@@ -51,7 +51,7 @@ const CommentSection: React.FC<CommentsProps> = ({
 
 	return (
 		<section className="comment-section">
-			<section className="create-comment spaced-bottom">
+			<section className="create-comment">
 				{!auth.authenticated ? (
 					<div className="meta card row a-centered">
 						<p className="light">Please sign up to share your thoughts.</p>
