@@ -1,5 +1,10 @@
 import React, { useEffect } from "react";
-import { QuestionDetail, Sidebar, SubHeader } from "../../components";
+import {
+	CommentSection,
+	QuestionDetail,
+	Sidebar,
+	SubHeader,
+} from "../../components";
 import { useFetch } from "../../hooks";
 
 interface DetailProps {
@@ -27,6 +32,7 @@ const QuestionDetailPage: React.FC<DetailProps> = ({ match }) => {
 				<Sidebar />
 				<main>
 					<QuestionDetail question={data} loading={loading} error={error} />
+					{!loading && data && !data.error && <CommentSection id={data.id} />}
 				</main>
 			</div>
 		</>

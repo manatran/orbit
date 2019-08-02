@@ -1,6 +1,9 @@
 import Ask from "./Ask/Ask";
 import AuthButtons from "./AuthButtons/AuthButtons";
 import AuthCard from "./AuthCard/AuthCard";
+import Comment from "./Comments/Comment";
+import CommentSection from "./Comments/CommentSection";
+import CommentsList from "./Comments/CommentsList";
 import Header from "./Header/Header";
 import Logo from "./Logo/Logo";
 import Menu from "./Navigation/Menu";
@@ -25,6 +28,9 @@ export {
 	Ask,
 	AuthButtons,
 	AuthCard,
+	Comment,
+	CommentSection,
+	CommentsList,
 	Header,
 	Logo,
 	Menu,

@@ -42,7 +42,7 @@ const QuestionDetail: React.FC<DetailProps> = ({
 
 	if (loading) {
 		return (
-			<section className="card">
+			<section className="card spaced-bottom">
 				<Skeleton />
 			</section>
 		);
@@ -52,7 +52,7 @@ const QuestionDetail: React.FC<DetailProps> = ({
 		const { author } = question;
 
 		return (
-			<section className="question-detail card">
+			<section className="question-detail card spaced-bottom">
 				<h2>{question.title}</h2>
 				<p className="author light" title={question.createdAt}>
 					Posted {getTimeDifference(question.createdAt)} by{" "}

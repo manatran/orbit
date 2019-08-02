@@ -94,7 +94,8 @@ button:focus{
 	width: 150px;
 }
 .button.light {
-	color: #40a3e6;
+	color: var(--text-lighter);
+	border-color: var(--text-lighter);
 	background-color: transparent;
 }
 .button.danger {

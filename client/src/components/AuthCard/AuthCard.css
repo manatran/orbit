@@ -52,7 +52,5 @@
 	width: 200px;
 	margin: 0 auto;
 	display: block;
-	color: var(--text-lighter);
-	border-color: var(--text-lighter);
 	margin-bottom: 32px;
 }

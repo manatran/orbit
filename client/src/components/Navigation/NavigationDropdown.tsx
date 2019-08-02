@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/logo.png";
+import { useFetch } from "../../hooks";
 import Dropdown from "../Dropdown/Dropdown";
 import { Menu } from "../index";
 
@@ -29,6 +29,7 @@ const NavigationDropdownButton = () => {
 		<React.Fragment>
 			<span className="row a-centered">
 				<i className="material-icons icon">trending_up</i>
+				{/* Make dynamic */}
 				<span className="sm-hide">Feed</span>
 			</span>
 			<i className="material-icons">arrow_drop_down</i>
@@ -37,6 +38,8 @@ const NavigationDropdownButton = () => {
 };
 
 const NavigationDropdownList: React.FC<DropdownProps> = ({ authenticated }) => {
+	const [{ data }] = useFetch("/categories", []);
+
 	return (
 		<>
 			<section className="menu">
@@ -44,67 +47,19 @@ const NavigationDropdownList: React.FC<DropdownProps> = ({ authenticated }) => {
 				<Menu />
 			</section>
 
-			{/* TODO: Fetch subs */}
-			{authenticated && (
-				<>
-					<section className="favorites">
-						<h2 className="small">Favorites</h2>
-						<div className="row a-centered j-between">
-							<Link to="/challenges" className="row a-centered">
-								<img src={Logo} alt="Challenges" />
-								Subscription
-							</Link>
-							<i
-								className="material-icons fav"
-								onClick={() => console.log("clicked!")}
-							>
-								favorite
-							</i>
-						</div>
-					</section>
+			{authenticated && data && (
+				<section className="subscriptions">
+					<h2 className="small">Subjects</h2>
 
-					<section className="subscriptions">
-						<h2 className="small">Subscriptions</h2>
-						<div className="row a-centered j-between">
-							<Link to="/challenges" className="row a-centered">
-								<img src={Logo} alt="Challenges" />
-								Subscription
+					{data.map((el: any) => (
+						<div key={el.id} className="row a-centered j-between">
+							<Link to={`/subject/${el.slug}`} className="row a-centered">
+								<img src={el.thumbnail} alt="Challenges" />
+								{el.name}
 							</Link>
-							<i
-								className="material-icons"
-								onClick={() => console.log("clicked!")}
-							>
-								favorite
-							</i>
 						</div>
-
-						<div className="row a-centered j-between">
-							<Link to="/challenges" className="row a-centered">
-								<img src={Logo} alt="Challenges" />
-								Subscription
-							</Link>
-							<i
-								className="material-icons"
-								onClick={() => console.log("clicked!")}
-							>
-								favorite
-							</i>
-						</div>
-
-						<div className="row a-centered j-between">
-							<Link to="/challenges" className="row a-centered">
-								<img src={Logo} alt="Challenges" />
-								Subscription
-							</Link>
-							<i
-								className="material-icons"
-								onClick={() => console.log("clicked!")}
-							>
-								favorite
-							</i>
-						</div>
-					</section>
-				</>
+					))}
+				</section>
 			)}
 		</>
 	);
