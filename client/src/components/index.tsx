@@ -21,6 +21,8 @@ import SkeletonTitle from "./Skeleton/SkeletonTitle";
 import Spinner from "./Spinner/Spinner";
 import Sub from "./Sub/Sub";
 import SubHeader from "./Sub/SubHeader";
+import Subcomment from "./Subcomments/Subcomment";
+import SubcommentsList from "./Subcomments/SubcommentsList";
 import AddSubmission from "./Submissions/AddSubmission";
 import SubmissionsList from "./Submissions/SubmissionsList";
 
@@ -48,6 +50,8 @@ export {
 	Spinner,
 	Sub,
 	SubHeader,
+	Subcomment,
+	SubcommentsList,
 	AddSubmission,
 	SubmissionsList,
 };

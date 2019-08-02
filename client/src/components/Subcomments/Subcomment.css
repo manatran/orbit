@@ -1,0 +1,7 @@
+.subcomment {
+	margin-left: 32px;
+	background-color: white;
+	padding: 16px;
+	box-sizing: border-box;
+	border-left: solid 3px transparent;
+}

@@ -47,7 +47,7 @@
 	border-left: solid 3px hsla(204, 77%, 58%, 0.75);
 }
 
-.comment .author{
+.comment .author {
 	font-size: 14px;
 	margin: 0;
 	margin-right: 8px;
@@ -59,4 +59,28 @@
 
 .comment p {
 	margin: 0;
+}
+
+.comment .options {
+	user-select: none;
+	margin-top: 16px;
+}
+
+.comment .options span {
+	cursor: pointer;
+	margin-right: 16px;
+}
+
+
+.subcomment-input textarea {
+	border-radius: 4px;
+	padding: 8px;
+	margin: 8px 0;
+	height: 40px;
+	border: solid 1px var(--light-grey);
+}
+
+.subcomment-input textarea:focus,
+.subcomment-input textarea:not(:placeholder-shown) {
+	height: 128px;
 }
