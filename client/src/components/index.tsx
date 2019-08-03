@@ -8,6 +8,8 @@ import Header from "./Header/Header";
 import Logo from "./Logo/Logo";
 import Menu from "./Navigation/Menu";
 import Navigation from "./Navigation/Navigation";
+import Profile from "./Profile/Profile";
+import ProfileSidebar from "./Profile/ProfileSidebar";
 import Question from "./Questions/Question";
 import QuestionDetail from "./Questions/QuestionDetail";
 import QuestionsList from "./Questions/QuestionsList";
@@ -37,6 +39,8 @@ export {
 	Logo,
 	Menu,
 	Navigation,
+	Profile,
+	ProfileSidebar,
 	Question,
 	QuestionDetail,
 	QuestionsList,

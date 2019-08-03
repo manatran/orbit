@@ -1,0 +1,36 @@
+.profile-sidebar .meta img {
+	border-radius: 4px;
+	width: 128px;
+	height: 128px;
+}
+
+.profile-sidebar .meta h2 {
+	font-size: 24px;
+	color: var(--text-light);
+	margin-bottom: 4px;
+}
+
+.profile-sidebar .rep {
+	color: var(--main);
+	margin: 0;
+}
+
+.profile-sidebar .bio {
+	font-size: 14px;
+	color: var(--text-light);
+}
+
+.profile-sidebar .meta {
+	padding-bottom: 16px;
+	margin-bottom: 16px;
+	border-bottom: solid 1px var(--light-grey);
+}
+
+
+
+
+.profile-sidebar .badges img {
+	width: 32px;
+	height: 32px;
+	margin-right: 8px;
+}

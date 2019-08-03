@@ -7,6 +7,7 @@ import {
 	CallbackPage,
 	HomePage,
 	PrivacyPage,
+	ProfilePage,
 	QuestionDetailPage,
 	QuestionsOverviewPage,
 	SignoutPage,
@@ -26,6 +27,9 @@ const AppRouter: React.FC = () => {
 				<Route exact path="/signup" component={AuthPage} />
 				<Route exact path="/callback" component={CallbackPage} />
 				<Route exact path="/signout" component={SignoutPage} />
+
+				{/* Profile */}
+				<Route exact path="/user/:user" component={ProfilePage} />
 
 				{/* Questions */}
 				<Route exact path="/ask" component={AskPage} />

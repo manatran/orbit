@@ -4,7 +4,8 @@
 	overflow: auto;
 }
 
-.submission {
+.submission,
+.submissions .skeleton-img {
   margin-right: 24px;
   width: 200px;
   height: 200px;
@@ -16,7 +17,8 @@
 	background-position: center;
 }
 
-.submission:last-of-type {
+.submission:last-of-type,
+.submissions .skeleton-img:last-of-type {
 	margin-right: 0;
 }
 
@@ -47,7 +49,8 @@
 
 
 @media only screen and (max-width: 720px) {
-	.submission {
+	.submission,
+	.submissions .skeleton-img {
 		height: 128px;
 		width: 128px;
 		min-height: 128px;

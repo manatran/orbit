@@ -9,7 +9,8 @@ module.exports = (db, DataTypes) => {
 	// Relations
 	Post.associate = models => {
 		Post.belongsToMany(models.User, {
-			through: "postLikes"
+			through: "postLikes",
+			as: "likedBy"
 		});
 
 		Post.belongsToMany(models.Tag, {

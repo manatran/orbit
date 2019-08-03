@@ -1,0 +1,23 @@
+.tab-nav {
+	background-color: var(--bg);
+  border-bottom: solid 1px var(--light-grey);
+  position: sticky;
+	top: 44px;
+	margin-bottom: 16px;
+}
+
+.tab-nav button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-lighter);
+  padding: 8px 16px 7px;
+  display: inline-block;
+  border-bottom: solid 2px transparent;
+}
+
+.tab-nav button.active {
+  color: var(--main);
+  border-bottom-color: var(--main);
+}

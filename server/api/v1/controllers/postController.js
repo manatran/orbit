@@ -13,6 +13,17 @@ exports.get_post = (req, res, next) => {
 				}
 			},
 			{
+				model: models.User,
+				as: "likedBy",
+				attributes: ["id"],
+				through: {
+					attributes: ["postId", "userId"]
+				},
+				attributes: {
+					exclude: ["accessToken"]
+				}
+			},
+			{
 				model: models.Category,
 				as: "subject"
 			}
@@ -139,21 +150,21 @@ exports.like_post = (req, res, next) => {
 	const { id } = req.params;
 	const userId = req.user.id;
 
-	// TODO: check if user has liked post, then increment/decrement
-	models.Post.findByPk(id)
-		.then((post) => {
-			post
-				.increment("totalLikes")
-				.then(newPost => {
-					res.status(202).json(newPost);
-				})
-				.catch(err => {
-					return res.status(500).json({ error: err });
-				});
-		})
-		.catch(err => {
-			return res.status(500).json({ error: err });
-		});
+	// // TODO: check if user has liked post, then increment/decrement
+	// models.Post.findByPk(id)
+	// 	.then((post) => {
+	// 		post
+	// 			.increment("totalLikes")
+	// 			.then(newPost => {
+	// 				res.status(202).json(newPost);
+	// 			})
+	// 			.catch(err => {
+	// 				return res.status(500).json({ error: err });
+	// 			});
+	// 	})
+	// 	.catch(err => {
+	// 		return res.status(500).json({ error: err });
+	// 	});
 };
 
 // Update post

@@ -41,6 +41,9 @@
 .question-detail .likes:hover {
 	background-color: var(--bg);
 }
+.question-detail .liked:hover {
+	background-color: var(--main);
+}
 
 .question-detail .options {
 	margin-top: 16px;

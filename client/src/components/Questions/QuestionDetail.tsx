@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { getTimeDifference } from "../../helpers";
 import { useFetch } from "../../hooks";
@@ -39,10 +39,16 @@ const QuestionDetail: React.FC<DetailProps> = ({
 	loading,
 	error,
 }) => {
+	const [liked, setLiked] = useState(0);
 	const [{ data }] = useFetch(`/comments/${id}`, null);
 
 	const endorse = () => {
-		// TODO: post request to like
+		// TODO: POST request to increment or decrement
+		if (liked) {
+			setLiked(0);
+		} else {
+			setLiked(1);
+		}
 	};
 
 	if (loading) {
@@ -70,11 +76,11 @@ const QuestionDetail: React.FC<DetailProps> = ({
 				<div className="row a-centered">
 					<button
 						onClick={() => endorse()}
-						className="likes row a-centered"
+						className={`likes row a-centered ${liked && `liked`}`}
 						title="Endorse this post"
 					>
 						<i className="material-icons">stars</i>
-						{question.totalLikes || 0}
+						{question.totalLikes + liked}
 					</button>
 					<div className="content">
 						<p>{question.content}</p>
