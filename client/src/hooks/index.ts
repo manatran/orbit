@@ -2,6 +2,18 @@ import { useEffect, useState } from "react";
 
 export const fetchUrl = "http://localhost:5000/api/v1";
 
+export const useTitle = (title: string) => {
+	useEffect(() => {
+		if (title && title !== "null") {
+			document.title = `${title} | Orbit`;
+		}
+
+		return () => {
+			document.title = "Orbit";
+		};
+	}, [title]);
+};
+
 export const useFetch = (endpoint: string, initialState?: any) => {
 	const [data, setData] = useState(initialState);
 	const [loading, setLoading] = useState(false);

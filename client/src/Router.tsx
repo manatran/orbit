@@ -10,6 +10,7 @@ import {
 	ProfilePage,
 	QuestionDetailPage,
 	QuestionsOverviewPage,
+	SettingsPage,
 	SignoutPage,
 	TermsPage,
 } from "./pages";
@@ -30,6 +31,7 @@ const AppRouter: React.FC = () => {
 
 				{/* Profile */}
 				<Route exact path="/user/:user" component={ProfilePage} />
+				<Route exact path="/settings" component={SettingsPage} />
 
 				{/* Questions */}
 				<Route exact path="/ask" component={AskPage} />

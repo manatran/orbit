@@ -12,6 +12,7 @@ import { useFetch } from "../hooks";
 const HomePage: React.FC = () => {
 	return (
 		<>
+			{/* TODO: Logged in header */}
 			<Header />
 			<div className="body row">
 				<Sidebar />

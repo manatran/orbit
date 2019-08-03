@@ -84,8 +84,10 @@ const Sidebar: React.FC = () => {
 				</section>
 
 				<section className="copy column centered">
-					<p>&copy; {new Date().getFullYear()} Manaus Transez</p>
-					<p>All rights reserved.</p>
+					<p className="light">
+						&copy; {new Date().getFullYear()} Manaus Transez
+					</p>
+					<p className="light">All rights reserved.</p>
 				</section>
 			</footer>
 		</aside>

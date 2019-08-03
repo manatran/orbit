@@ -10,6 +10,11 @@
 	margin-bottom: 4px;
 }
 
+.profile-sidebar .meta .button {
+	display: block;
+	margin-top: 16px;
+}
+
 .profile-sidebar .rep {
 	color: var(--main);
 	margin: 0;

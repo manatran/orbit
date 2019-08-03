@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Sidebar } from "../components";
+import { useTitle } from "../hooks";
 
 const TermsPage = () => {
+	useTitle("Terms of use");
+
 	return (
 		<div className="body spaced row">
 			<Sidebar />

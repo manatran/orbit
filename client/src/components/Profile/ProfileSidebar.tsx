@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Badge from "../../assets/icons/badge-admin.png";
 
 import "./ProfileSidebar.css";
@@ -16,6 +17,12 @@ const ProfileSidebar: React.FC<ProfileSidebarProps> = ({ user, currUser }) => {
 				<h2>{user.login}</h2>
 				<p className="rep">{user.profile.reputation} rep</p>
 				<p className="bio">{user.bio}</p>
+
+				{user.profile.id === currUser.profile.id && (
+					<Link to="/settings" className="button light">
+						Settings
+					</Link>
+				)}
 			</section>
 
 			{user.profile.isAdmin && (

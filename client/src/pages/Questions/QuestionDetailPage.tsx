@@ -5,7 +5,7 @@ import {
 	Sidebar,
 	SubHeader,
 } from "../../components";
-import { useFetch } from "../../hooks";
+import { useFetch, useTitle } from "../../hooks";
 
 interface DetailProps {
 	match: {
@@ -17,13 +17,7 @@ const QuestionDetailPage: React.FC<DetailProps> = ({ match }) => {
 	const id = match.params.id;
 	const [{ data, loading, error }] = useFetch(`/post/${id}`);
 
-	useEffect(() => {
-		if (data && data.title) document.title = `${data.title}  |  Orbit`;
-
-		return () => {
-			document.title = "Orbit";
-		};
-	}, [data]);
+	useTitle(data && data.title);
 
 	return (
 		<>

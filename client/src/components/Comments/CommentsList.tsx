@@ -17,7 +17,7 @@ const CommentsList: React.FC<CommentsListProps> = ({
 	error,
 }) => {
 	return (
-		<div className="Comments">
+		<div className="comment-section">
 			{loading && <CommentSkeleton />}
 			{error && <CommentError />}
 

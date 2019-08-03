@@ -1,7 +1,10 @@
 import React from "react";
 import { Sidebar } from "../components";
+import { useTitle } from "../hooks";
 
 const PrivacyPage = () => {
+	useTitle("Privacy policy");
+
 	return (
 		<div className="body spaced row">
 			<Sidebar />
