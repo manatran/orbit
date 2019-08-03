@@ -1,0 +1,33 @@
+.settings h2 {
+	color: var(--text-light);
+}
+
+.settings h3 {
+	margin-top: 0;
+	margin-bottom: 32px;
+	font-size: 14px;
+	padding: 8px 0;
+	color: var(--text-lighter);
+	border-bottom: solid 1px var(--light-grey);
+}
+
+.settings .prompt {
+	padding: 16px;
+	box-sizing: border-box;
+}
+
+.settings .btn-container .button {
+	margin-right: 8px;
+	padding: 8px 24px;
+	width: auto
+}
+
+.settings .btn-container .danger {
+	background-color: var(--danger);
+	color: var(--bg);
+}
+
+.settings .btn-container .danger.light {
+	background-color: transparent;
+	color: var(--danger);
+}

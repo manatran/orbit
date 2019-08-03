@@ -8,27 +8,7 @@ import "./QuestionDetail.css";
 
 interface DetailProps {
 	id: number;
-	question: {
-		error?: any;
-		id: number;
-		title: string;
-		content: string;
-		totalLikes: number;
-		createdAt: string;
-		subject: {
-			id: number;
-			name: string;
-			description: string;
-			thumbnail: string;
-			subscribers: number | null;
-		};
-		author: {
-			id: number;
-			username: string;
-			reputation: number;
-			isAdmin: boolean;
-		};
-	};
+	question: any;
 	loading: boolean;
 	error: boolean;
 }
@@ -65,13 +45,19 @@ const QuestionDetail: React.FC<DetailProps> = ({
 		return (
 			<section className="question-detail card spaced-bottom">
 				<h2>{question.title}</h2>
-				<p className="author light" title={question.createdAt}>
-					Posted {getTimeDifference(question.createdAt)} by{" "}
-					<Link className="link" to={`/user/${author.username}`}>
-						{author.isAdmin && <i className="material-icons">verified_user</i>}
-						{author.username}
-					</Link>
-				</p>
+				{author ? (
+					<p className="author light" title={question.createdAt}>
+						Posted {getTimeDifference(question.createdAt)} by{" "}
+						<Link className="link" to={`/user/${author.username}`}>
+							{author.isAdmin && (
+								<i className="material-icons">verified_user</i>
+							)}
+							{author.username}
+						</Link>
+					</p>
+				) : (
+					<p className="author light">[DELETED]</p>
+				)}
 
 				<div className="row a-centered">
 					<button

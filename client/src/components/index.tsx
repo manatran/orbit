@@ -15,6 +15,7 @@ import QuestionDetail from "./Questions/QuestionDetail";
 import QuestionsList from "./Questions/QuestionsList";
 import ScrollTop from "./ScrollTop/ScrollTop";
 import SearchBar from "./SearchBar/SearchBar";
+import Settings from "./Settings/Settings";
 import Sidebar from "./Sidebar/Sidebar";
 import Skeleton from "./Skeleton/Skeleton";
 import SkeletonImg from "./Skeleton/SkeletonImg";
@@ -46,6 +47,7 @@ export {
 	QuestionsList,
 	ScrollTop,
 	SearchBar,
+	Settings,
 	Sidebar,
 	Skeleton,
 	SkeletonImg,

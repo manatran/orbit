@@ -84,12 +84,16 @@ const Comment: React.FC<CommentProps> = ({
 						style={{ borderLeftColor: `hsla(${hue}, 77%, 58%, 0.5)` }}
 					>
 						<div className="row a-centered meta">
-							<Link to={`/user/${author.username}`} className="link author">
-								{author.isAdmin && (
-									<i className="material-icons admin">verified_user</i>
-								)}
-								{author.username}
-							</Link>
+							{author ? (
+								<Link to={`/user/${author.username}`} className="link author">
+									{author.isAdmin && (
+										<i className="material-icons admin">verified_user</i>
+									)}
+									{author.username}
+								</Link>
+							) : (
+								<p className="light author">[DELETED]</p>
+							)}
 							<p className="light">{getTimeDifference(timestamp)}</p>
 						</div>
 						<p>{content}</p>
@@ -97,7 +101,7 @@ const Comment: React.FC<CommentProps> = ({
 							<span onClick={() => setShowInput(!showInput)}>
 								{showInput ? "Cancel" : "Reply"}
 							</span>
-							{author.id === auth.user.profile.id}
+							{auth.authenticated && author.id === auth.user.profile.id}
 							<span className="danger" onClick={() => deleteComment()}>
 								Delete
 							</span>

@@ -36,13 +36,17 @@ const Question: React.FC<QuestionProps> = ({
 			/>
 			<div className="question-body column">
 				<h3>{title}</h3>
-				<p>
-					Posted to {subject.name} by{" "}
-					{author.isAdmin && (
-						<i className="material-icons admin">verified_user</i>
-					)}{" "}
-					{author.username}
-				</p>
+				{author ? (
+					<p>
+						Posted to {subject.name} by{" "}
+						{author.isAdmin && (
+							<i className="material-icons admin">verified_user</i>
+						)}{" "}
+						{author.username}
+					</p>
+				) : (
+					<p className="light">[DELETED]</p>
+				)}
 				<p className="light" title={timestamp}>
 					{getTimeDifference(timestamp)}
 				</p>

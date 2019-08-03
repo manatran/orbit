@@ -1,17 +1,41 @@
 import React from "react";
-import { Sidebar } from "../../components";
+import { connect } from "react-redux";
+import { Redirect } from "react-router";
+import { Dispatch } from "redux";
+import { Settings, Sidebar } from "../../components";
 import { useTitle } from "../../hooks";
+import { logout } from "../../store/actions";
 
-const SettingsPage = () => {
+interface SettingsProps {
+	auth: any;
+	signout: () => Dispatch;
+}
+
+const SettingsPage: React.FC<SettingsProps> = ({ auth, signout }) => {
 	useTitle("Settings");
 
 	return (
 		<div className="body spaced row">
 			<Sidebar />
 			<main>
-				<p>hello</p>
+				<Settings token={auth.token} logout={signout} />
+				{!auth.authenticated && <Redirect to="/" />}
 			</main>
 		</div>
 	);
 };
-export default SettingsPage;
+
+const mapStateToProps = (state: any) => ({
+	auth: state.auth,
+});
+
+const mapDispatchToProps = (dispatch: any) => {
+	return {
+		signout: () => dispatch(logout()),
+	};
+};
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(SettingsPage);

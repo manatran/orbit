@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Redirect } from "react-router";
 import { Profile, ProfileSidebar, Spinner } from "../../components";
 import { useFetch, useTitle } from "../../hooks";
 
@@ -10,7 +11,7 @@ interface ProfileProps {
 
 const ProfilePage: React.FC<ProfileProps> = ({ auth, match }) => {
 	const slug = match.params.user;
-	const [{ data }] = useFetch(`/user/${slug}`, null);
+	const [{ data, loading, error }] = useFetch(`/user/${slug}`, null);
 
 	useTitle(`${data && data.login}`);
 
@@ -24,7 +25,10 @@ const ProfilePage: React.FC<ProfileProps> = ({ auth, match }) => {
 					</main>
 				</>
 			) : (
-				<Spinner size={64} />
+				<>
+					<Spinner size={64} />
+					{data && data.error && <Redirect to="/" />}
+				</>
 			)}
 		</div>
 	);

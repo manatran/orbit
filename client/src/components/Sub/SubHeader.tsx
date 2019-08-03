@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useFetch, useTitle } from "../../hooks";
+import { useFetch } from "../../hooks";
 import { SkeletonImg, SkeletonText, SkeletonTitle } from "../index";
 
 import "./SubHeader.css";
