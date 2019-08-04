@@ -11,7 +11,7 @@ interface ProfileProps {
 
 const ProfilePage: React.FC<ProfileProps> = ({ auth, match }) => {
 	const slug = match.params.user;
-	const [{ data, loading, error }] = useFetch(`/user/${slug}`, null);
+	const [{ data }] = useFetch(`/user/${slug}`, null);
 
 	useTitle(`${data && data.login}`);
 

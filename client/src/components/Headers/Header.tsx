@@ -1,11 +1,11 @@
 import React from "react";
-import { AuthButtons, Logo } from "../../components";
+import { AuthButtons, Logo } from "..";
 
 import "./Header.css";
 
 const Header: React.FC = () => {
 	return (
-		<header className="row a-centered j-centered wrap">
+		<header className="row centered wrap">
 			<div className="intro column">
 				<h1>Welcome to Orbit!</h1>
 				<p>

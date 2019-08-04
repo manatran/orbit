@@ -18,7 +18,7 @@ const Sidebar: React.FC = () => {
 			<Link to="/ask" className="button">
 				Ask a question
 			</Link>
-			<Link to="/ask" className="button light">
+			<Link to="/submit" className="button light">
 				Submit your creation
 			</Link>
 

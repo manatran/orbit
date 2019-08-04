@@ -1,19 +1,26 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import {
 	AddSubmission,
 	Header,
 	QuestionsList,
 	Sidebar,
+	SubmissionHeader,
 	SubmissionsList,
 } from "../components";
 import { useFetch } from "../hooks";
 
-const HomePage: React.FC = () => {
+interface HomePageProps {
+	auth: any;
+}
+
+const HomePage: React.FC<HomePageProps> = ({ auth }) => {
 	return (
 		<>
 			{/* TODO: Logged in header */}
-			<Header />
+			{auth.authenticated ? <SubmissionHeader /> : <Header />}
+
 			<div className="body row">
 				<Sidebar />
 				<main>
@@ -24,7 +31,12 @@ const HomePage: React.FC = () => {
 		</>
 	);
 };
-export default HomePage;
+
+const mapStateToProps = (state: any) => ({
+	auth: state.auth,
+});
+
+export default connect(mapStateToProps)(HomePage);
 
 const PopularSubmissions = () => {
 	const [{ data, loading, error }] = useFetch("/submissions/recent", []);

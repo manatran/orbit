@@ -41,6 +41,9 @@ const AppRouter: React.FC = () => {
 				{/* Static */}
 				<Route exact path="/terms" component={TermsPage} />
 				<Route exact path="/privacy" component={PrivacyPage} />
+
+				{/* 404 Fallback */}
+				<Redirect from="*" to="/" />
 			</Switch>
 		</React.Fragment>
 	);

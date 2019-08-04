@@ -4,7 +4,8 @@ import AuthCard from "./AuthCard/AuthCard";
 import Comment from "./Comments/Comment";
 import CommentSection from "./Comments/CommentSection";
 import CommentsList from "./Comments/CommentsList";
-import Header from "./Header/Header";
+import Header from "./Headers/Header";
+import SubmissionHeader from "./Headers/SubmissionHeader";
 import Logo from "./Logo/Logo";
 import Menu from "./Navigation/Menu";
 import Navigation from "./Navigation/Navigation";
@@ -37,6 +38,7 @@ export {
 	CommentSection,
 	CommentsList,
 	Header,
+	SubmissionHeader,
 	Logo,
 	Menu,
 	Navigation,

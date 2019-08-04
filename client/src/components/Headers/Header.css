@@ -6,6 +6,10 @@ header {
 	background-image: url("../../assets/pattern.png"), linear-gradient(to right, var(--header-1), var(--header-2));
 }
 
+header.secondary {
+	background-image: url("../../assets/pattern.png"), linear-gradient(to right, var(--header-3), var(--header-4));
+}
+
 header .intro,
 header .login-btns {
 	margin: 0 48px 16px 48px;
