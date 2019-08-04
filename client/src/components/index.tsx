@@ -4,6 +4,7 @@ import AuthCard from "./AuthCard/AuthCard";
 import Comment from "./Comments/Comment";
 import CommentSection from "./Comments/CommentSection";
 import CommentsList from "./Comments/CommentsList";
+import Dashboard from "./Dashboard/Dashboard";
 import Header from "./Headers/Header";
 import SubmissionHeader from "./Headers/SubmissionHeader";
 import Logo from "./Logo/Logo";
@@ -37,6 +38,7 @@ export {
 	Comment,
 	CommentSection,
 	CommentsList,
+	Dashboard,
 	Header,
 	SubmissionHeader,
 	Logo,

@@ -45,16 +45,20 @@
 	background-color: var(--main);
 }
 
+.report .question-detail .options {
+	display: none;
+}
+
 .question-detail .options {
 	margin-top: 16px;
 	font-size: 14px;
 	padding-top: 16px;
 	border-top: solid 1px var(--light-grey);
-	color: var(--text-lighter);
 }
 
-.question-detail .options span {
-	cursor: pointer;
+.question-detail .options span,
+.question-detail .options a {
+	color: var(--text-lighter);
 	margin-right: 24px;
 }
 

@@ -22,7 +22,11 @@ const CallbackPage: React.FC<CallbackProps> = ({
 	saveToken,
 }) => {
 	const token = new URLSearchParams(location.search).get("token");
-	const [{ data, loading, error }] = useAuthFetch("/user", token, null);
+	const [{ data, loading, error }] = useAuthFetch(
+		"/user",
+		`Bearer ${token}`,
+		null
+	);
 
 	useEffect(() => {
 		if (data) {

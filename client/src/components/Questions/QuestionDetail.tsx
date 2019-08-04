@@ -20,7 +20,7 @@ const QuestionDetail: React.FC<DetailProps> = ({
 	error,
 }) => {
 	const [liked, setLiked] = useState(0);
-	const [{ data }] = useFetch(`/comments/${id}`, null);
+	const [{ data }] = useFetch(`/comments/${id}`, []);
 
 	const endorse = () => {
 		// TODO: POST request to increment or decrement
@@ -76,12 +76,12 @@ const QuestionDetail: React.FC<DetailProps> = ({
 				<div className="row a-centered options">
 					<span className="row a-centered">
 						<i className="material-icons">comments</i>
-						{(data && data.length) || 0} comment(s)
+						{data.length || 0} comment(s)
 					</span>
 					{/* TODO: report post */}
-					<span className="row a-centered">
+					<Link to={`/report/${id}`} className="row a-centered">
 						<i className="material-icons">report</i>report
-					</span>
+					</Link>
 				</div>
 			</section>
 		);

@@ -52,8 +52,6 @@ const Ask: React.FC<AskProps> = ({ token }) => {
 
 		setError("");
 		setRedirect(newPost.id);
-
-		console.log(newPost);
 	};
 
 	return (

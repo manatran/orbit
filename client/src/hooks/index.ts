@@ -64,7 +64,7 @@ export const useAuthFetch = (
 			try {
 				const res = await fetch(`${fetchUrl}${endpoint}`, {
 					headers: {
-						Authorization: `Bearer ${token}`,
+						Authorization: `${token}`,
 						Accept: `application/json`,
 						"Content-Type": `application/json`,
 					},

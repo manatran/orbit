@@ -169,6 +169,28 @@ p.light {
 	margin-bottom: 32px;
 }
 
+.vertical-tabs {
+  display: flex;
+	flex-direction: column;
+}
+.vertical-tabs button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px 8px 13px;
+  margin-bottom: 8px;
+  text-align: center;
+  border-left: solid 3px transparent;
+  color: #999999;
+}
+
+.vertical-tabs .active{
+  color: #40a3e6;
+  border-left-color: #40a3e6;
+  background-color: #E9E9E9;
+}
+
+
 @media only screen and (max-width: 720px) {
 	.sm-hide {
 		display: none;
