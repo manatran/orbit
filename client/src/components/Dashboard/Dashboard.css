@@ -1,3 +1,47 @@
 .report {
 	margin-bottom: 16px;
 }
+
+.categories input,
+.select-container {
+	color: var(--text-light);
+	border: solid 1px var(--light-grey);
+	border-radius: 4px;
+	padding: 16px;
+	margin-bottom: 16px;
+	box-sizing: border-box;
+	margin-bottom: 8px;
+	display: block;
+	background-color: white;
+}
+
+form {
+	max-width: 720px;
+}
+
+.select-container {
+	padding: 0 16px;
+}
+
+.select-container input {
+	padding: 16px 0;
+	width: 100%;
+	border: none;
+	margin-bottom: 0;
+}
+
+select {
+	color: var(--text-light);
+	padding: 16px 0;
+	border: none;
+	width: 100%;
+}
+
+select:focus,
+input:focus {
+	outline: none;
+}
+
+button.button {
+	margin-top: 24px;
+}

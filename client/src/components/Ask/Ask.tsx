@@ -64,10 +64,11 @@ const Ask: React.FC<AskProps> = ({ token }) => {
 						className="thumbnail"
 						style={{ backgroundImage: `url(${subject.thumbnail})` }}
 					/>
-					<CommunityOptions
-						subjectList={data}
-						subject={subject}
-						setSubject={setSubject}
+					<SelectList
+						placeholder="Choose a community"
+						options={data}
+						value={subject}
+						setValue={setSubject}
 					/>
 				</div>
 
@@ -100,24 +101,26 @@ const mapStateToProps = (state: any) => ({
 export default connect(mapStateToProps)(Ask);
 
 interface OptionProps {
-	subjectList: any[];
-	subject: any;
-	setSubject: any;
+	options: any[];
+	value: any;
+	setValue: any;
+	placeholder: string;
 }
 
-const CommunityOptions: React.FC<OptionProps> = ({
-	subjectList,
-	subject,
-	setSubject,
+export const SelectList: React.FC<OptionProps> = ({
+	options,
+	value,
+	setValue,
+	placeholder,
 }) => {
 	return (
 		<>
 			<select
-				value={JSON.stringify(subject)}
-				onChange={(e) => setSubject(JSON.parse(e.target.value))}
+				value={JSON.stringify(value)}
+				onChange={(e) => setValue(JSON.parse(e.target.value))}
 			>
-				<option hidden>Choose a community</option>
-				{subjectList.map((el) => (
+				<option hidden>{placeholder}</option>
+				{options.map((el) => (
 					<option key={el.id} value={JSON.stringify(el)}>
 						{el.name}
 					</option>

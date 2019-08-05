@@ -11,6 +11,7 @@ interface ReportsProps {
 
 const Report: React.FC<ReportsProps> = ({ auth, id, content, question }) => {
 	const [success, setSuccess] = useState("");
+	const [error, setError] = useState("");
 
 	const deletePost = async () => {
 		const res = await fetch(`${fetchUrl}/reports/${id}`, {
@@ -25,7 +26,10 @@ const Report: React.FC<ReportsProps> = ({ auth, id, content, question }) => {
 
 		if (!json.error) {
 			setSuccess("Successfully deleted post");
+			return;
 		}
+
+		setError("Something went wrong. Please try again later.");
 	};
 
 	const ignorePost = async () => {
@@ -41,12 +45,16 @@ const Report: React.FC<ReportsProps> = ({ auth, id, content, question }) => {
 
 		if (!json.error) {
 			setSuccess("Successfully ignored report");
+			return;
 		}
+
+		setError("Something went wrong. Please try again later.");
 	};
 
 	return (
 		<div className="report card">
 			<p className="success">{success}</p>
+			<p className="warning">{error}</p>
 			{!success && (
 				<>
 					<QuestionDetail

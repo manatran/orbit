@@ -190,6 +190,15 @@ p.light {
   background-color: #E9E9E9;
 }
 
+.select-container .thumbnail {
+	height: 24px;
+	width: 24px;
+	border: dashed 1px var(--text-lighter);
+	background-size: contain;
+	background-position: center;
+	border-radius: 4px;
+	margin-right: 16px;
+}
 
 @media only screen and (max-width: 720px) {
 	.sm-hide {

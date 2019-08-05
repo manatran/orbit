@@ -44,13 +44,3 @@
 .ask select:focus {
 	outline: none;
 }
-
-.ask .select-container .thumbnail {
-	height: 24px;
-	width: 24px;
-	border: dashed 1px var(--text-lighter);
-	background-size: contain;
-	background-position: center;
-	border-radius: 4px;
-	margin-right: 16px;
-}

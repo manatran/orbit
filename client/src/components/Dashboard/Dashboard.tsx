@@ -62,7 +62,7 @@ interface ContentProps {
 const RenderContent: React.FC<ContentProps> = ({ auth, tab }) => {
 	switch (tab) {
 		case "categories":
-			return <Categories />;
+			return <Categories auth={auth} />;
 		case "contests":
 			return <Contests />;
 		case "reports":
