@@ -10,8 +10,7 @@ header.secondary {
 	background-image: url("../../assets/pattern.png"), linear-gradient(to right, var(--header-3), var(--header-4));
 }
 
-header .intro,
-header .login-btns {
+header .column {
 	margin: 0 48px 16px 48px;
 }
 
@@ -32,4 +31,38 @@ header .logo {
 	width: 64px;
 	height: 64px;
 	box-shadow: 0 1px 4px var(--text-light);
+}
+
+.secondary h1 {
+	margin-bottom: 0;
+}
+
+.secondary .column:last-of-type {
+	text-align: right;
+}
+.secondary .column:last-of-type p {
+	font-size: 14px;
+	margin: 0;
+}
+
+.contest-list .row h4 {
+	font-size: 14px;
+}
+
+.contest-list h4,
+.contest-list p {
+	width: 25%;
+	margin: 0;
+}
+
+.contest-list h4:first-of-type,
+.contest-list p:first-of-type {
+	width: 33.333%;
+}
+
+.contest-list-titles {
+	margin-bottom: 16px;
+}
+.contest-list-item {
+	margin-bottom: 8px;
 }

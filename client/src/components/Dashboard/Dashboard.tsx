@@ -47,7 +47,7 @@ const Dashboard: React.FC<DashboardProps> = ({ auth }) => {
 				</button>
 			</aside>
 
-			<main>
+			<main className="dashboard">
 				<RenderContent auth={auth} tab={tab} />
 			</main>
 			{redirect && <Redirect to="/" />}
@@ -65,7 +65,7 @@ const RenderContent: React.FC<ContentProps> = ({ auth, tab }) => {
 		case "categories":
 			return <Categories auth={auth} />;
 		case "contests":
-			return <Contests />;
+			return <Contests auth={auth} />;
 		case "reports":
 		default:
 			return <Reports auth={auth} />;

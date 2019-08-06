@@ -2,7 +2,7 @@
 	margin-bottom: 16px;
 }
 
-.categories input,
+.dashboard input,
 .select-container {
 	color: var(--text-light);
 	border: solid 1px var(--light-grey);
@@ -44,4 +44,18 @@ input:focus {
 
 button.button {
 	margin-top: 24px;
+}
+
+.img-input .thumbnail {
+	background-repeat: no-repeat;
+}
+
+.card.input {
+	padding: 0 16px;
+	flex: 1;
+	margin-right: 8px;
+}
+
+.card.input:last-of-type {
+	margin: 0;
 }

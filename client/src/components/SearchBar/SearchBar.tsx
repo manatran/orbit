@@ -14,6 +14,7 @@ const SearchBar: React.FC<SearchProps> = (props) => {
 			action={props.action || "/search"}
 			method="GET"
 		>
+			{/* TODO: search functionality */}
 			<i className="material-icons">search</i>
 			<input
 				type="text"

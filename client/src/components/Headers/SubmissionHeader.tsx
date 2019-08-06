@@ -9,7 +9,7 @@ const SubmissionHeader: React.FC = () => {
 
 	if (data && !data.error) {
 		return (
-			<header className="secondary row centered wrap">
+			<header className="secondary row j-centered wrap">
 				<div className="column">
 					<h1>This month's challenge</h1>
 					<p>

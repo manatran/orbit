@@ -78,7 +78,6 @@ const QuestionDetail: React.FC<DetailProps> = ({
 						<i className="material-icons">comments</i>
 						{data.length || 0} comment(s)
 					</span>
-					{/* TODO: report post */}
 					<Link to={`/report/${id}`} className="row a-centered">
 						<i className="material-icons">report</i>report
 					</Link>
