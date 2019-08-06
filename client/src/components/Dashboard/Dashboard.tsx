@@ -25,6 +25,7 @@ const Dashboard: React.FC<DashboardProps> = ({ auth }) => {
 
 	return (
 		<section className="body spaced row">
+			{/* TODO: make responsive */}
 			<aside className="vertical-tabs column">
 				<button
 					className={tab === "reports" ? "active" : ""}

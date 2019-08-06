@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Sub } from "..";
 import { fetchUrl, useFetch } from "../../hooks";
 import { SelectList } from "../Ask/Ask";
 
@@ -66,8 +67,11 @@ const Categories: React.FC<CategoriesProps> = ({ auth }) => {
 
 	return (
 		<section className="categories">
-			<h2>Create a category</h2>
-			<form className="column" onSubmit={(e) => createCategory(e)}>
+			<h2>Create a subject</h2>
+			<form
+				className="column spaced-bottom"
+				onSubmit={(e) => createCategory(e)}
+			>
 				{error && <p className="error">{error}</p>}
 				{success && <p className="success">{success}</p>}
 
@@ -134,6 +138,22 @@ const Categories: React.FC<CategoriesProps> = ({ auth }) => {
 					Create category
 				</button>
 			</form>
+
+			<div className="list">
+				<h2>All subjects</h2>
+				{data &&
+					!data.error &&
+					data.map((el: any) => (
+						<Sub
+							key={el.id}
+							slug={el.slug}
+							title={el.name}
+							description={el.description}
+							icon={el.thumbnail}
+							subs={el.subscribers}
+						/>
+					))}
+			</div>
 		</section>
 	);
 };
