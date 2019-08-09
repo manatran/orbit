@@ -30,6 +30,7 @@ import Subcomment from "./Subcomments/Subcomment";
 import SubcommentsList from "./Subcomments/SubcommentsList";
 import AddSubmission from "./Submissions/AddSubmission";
 import SubmissionsList from "./Submissions/SubmissionsList";
+import Submit from "./Submit/Submit";
 
 export {
 	Ask,
@@ -64,4 +65,5 @@ export {
 	SubcommentsList,
 	AddSubmission,
 	SubmissionsList,
+	Submit,
 };

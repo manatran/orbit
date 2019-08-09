@@ -109,7 +109,7 @@ const Categories: React.FC<CategoriesProps> = ({ auth }) => {
 					/>
 					<input
 						type="text"
-						placeholder="Thumbnail"
+						placeholder="Thumbnail URL"
 						value={thumbnail}
 						onChange={(e) => setThumbnail(e.target.value)}
 					/>

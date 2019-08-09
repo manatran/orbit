@@ -196,6 +196,7 @@ p.light {
 	border: dashed 1px var(--text-lighter);
 	background-size: contain;
 	background-position: center;
+	background-repeat: no-repeat;
 	border-radius: 4px;
 	margin-right: 16px;
 }
