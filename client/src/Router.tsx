@@ -14,6 +14,7 @@ import {
 	ReportPage,
 	SettingsPage,
 	SignoutPage,
+	SubmissionDetailPage,
 	SubmitPage,
 	TermsPage,
 } from "./pages";
@@ -43,6 +44,7 @@ const AppRouter: React.FC = () => {
 
 				{/* Submissions */}
 				<Route exact path="/submit" component={SubmitPage} />
+				<Route exact path="/submission/:id" component={SubmissionDetailPage} />
 
 				{/* Report */}
 				<Route exact path="/report/:id" component={ReportPage} />

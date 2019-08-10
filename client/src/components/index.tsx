@@ -29,6 +29,7 @@ import SubHeader from "./Sub/SubHeader";
 import Subcomment from "./Subcomments/Subcomment";
 import SubcommentsList from "./Subcomments/SubcommentsList";
 import AddSubmission from "./Submissions/AddSubmission";
+import SubmissionDetail from "./Submissions/SubmissionDetail";
 import SubmissionsList from "./Submissions/SubmissionsList";
 import Submit from "./Submit/Submit";
 
@@ -64,6 +65,7 @@ export {
 	Subcomment,
 	SubcommentsList,
 	AddSubmission,
+	SubmissionDetail,
 	SubmissionsList,
 	Submit,
 };

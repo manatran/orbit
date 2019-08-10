@@ -1,0 +1,35 @@
+.submission-detail .thumbnail {
+	height: 256px;
+	width: 256px;
+	min-height: 256px;
+	min-width: 256px;
+	background-size: cover;
+	background-position: center;
+	margin-right: 32px;
+	margin-bottom: 16px;
+}
+
+.submission-detail .content {
+	min-width: 256px;
+}
+
+.submission-detail h1 {
+	margin-top: 0;
+	margin-bottom: 8px;
+	align-items: flex-end;
+}
+
+.submission-detail h1 .light {
+	padding-left: 8px;
+	margin: 0;
+}
+
+.submission-detail p {
+	line-height: 1.5;
+	color: var(--text-light);
+}
+
+.submission-detail a i.material-icons {
+	margin-left: 8px;
+	font-size: 20px;
+}

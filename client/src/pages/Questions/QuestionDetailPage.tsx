@@ -8,9 +8,7 @@ import {
 import { useFetch, useTitle } from "../../hooks";
 
 interface DetailProps {
-	match: {
-		params: any;
-	};
+	match: any;
 }
 
 const QuestionDetailPage: React.FC<DetailProps> = ({ match }) => {

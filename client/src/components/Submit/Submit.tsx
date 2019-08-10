@@ -46,8 +46,6 @@ const Submit: React.FC<SubmitProps> = ({ token }) => {
 			contestId,
 		};
 
-		console.log(body);
-
 		const res = await fetch(`${fetchUrl}/submissions`, {
 			method: "POST",
 			body: JSON.stringify(body),
