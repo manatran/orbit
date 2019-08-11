@@ -1,7 +1,7 @@
 {
   "name": "orbit",
   "version": "1.0.0",
-  "description": "A beginner friendly community for developers",
+  "description": "A wholesome community for developers",
   "main": "server.js",
   "scripts": {
     "lint": "cd client && npm run lint",

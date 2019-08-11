@@ -1,6 +1,6 @@
 # Orbit
 
-Orbit is a beginner-friendly community for developers.
+Orbit is a wholesome community for developers.
 
 ## Table of contents
 
