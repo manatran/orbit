@@ -44,7 +44,6 @@ const Sidebar: React.FC = () => {
 					<div className="column">
 						<Link to="/">Feed</Link>
 						<Link to="/challenges">Code challenges</Link>
-						<Link to="/suggestions">Challenge suggestions</Link>
 					</div>
 					<div className="column a-end">
 						<Link to="/privacy">Privacy policy</Link>

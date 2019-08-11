@@ -22,10 +22,6 @@ const Menu: React.FC<MenuProps> = ({ authenticated, user }) => {
 				<i className="material-icons icon">important_devices</i>
 				<span>Challenges</span>
 			</Link>
-			<Link to="/suggestions" className="row a-centered" title="Suggestions">
-				<i className="material-icons icon">wb_incandescent</i>
-				<span>Suggestions</span>
-			</Link>
 
 			{authenticated && user.profile.isAdmin && (
 				<Link to="/admin" className="row a-centered" title="Dashboard">
