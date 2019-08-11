@@ -23,6 +23,7 @@ const SubmissionDetailPage: React.FC<DetailProps> = ({ match }) => {
 					error={error}
 				/>
 			</main>
+			<aside />
 		</div>
 	);
 };
