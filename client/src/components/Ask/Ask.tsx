@@ -7,9 +7,10 @@ import "./Ask.css";
 
 interface AskProps {
 	token: string;
+	authenticated: boolean;
 }
 
-const Ask: React.FC<AskProps> = ({ token }) => {
+const Ask: React.FC<AskProps> = ({ token, authenticated }) => {
 	const [error, setError] = useState("");
 	const [title, setTitle] = useState("");
 	const [content, setContent] = useState("");
@@ -90,12 +91,14 @@ const Ask: React.FC<AskProps> = ({ token }) => {
 				</button>
 			</form>
 			{redirect && <Redirect to={`/question/${redirect}`} />}
+			{!authenticated && <Redirect to={`/signup`} />}
 		</div>
 	);
 };
 
 const mapStateToProps = (state: any) => ({
 	token: state.auth.token,
+	authenticated: state.auth.authenticated,
 });
 
 export default connect(mapStateToProps)(Ask);

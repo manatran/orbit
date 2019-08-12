@@ -6,9 +6,10 @@ import { fetchUrl } from "../../hooks";
 
 interface SubmitProps {
 	token: string;
+	authenticated: boolean;
 }
 
-const Submit: React.FC<SubmitProps> = ({ token }) => {
+const Submit: React.FC<SubmitProps> = ({ token, authenticated }) => {
 	const [redirect, setRedirect] = useState("");
 	const [error, setError] = useState("");
 	const [title, setTitle] = useState("");
@@ -115,12 +116,14 @@ const Submit: React.FC<SubmitProps> = ({ token }) => {
 				</button>
 			</form>
 			{redirect && <Redirect to={`/subissions/${redirect}`} />}
+			{!authenticated && <Redirect to={`/signup`} />}
 		</div>
 	);
 };
 
 const mapStateToProps = (state: any) => ({
 	token: state.auth.token,
+	authenticated: state.auth.authenticated,
 });
 
 export default connect(mapStateToProps)(Submit);
