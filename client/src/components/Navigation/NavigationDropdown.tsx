@@ -51,14 +51,20 @@ const NavigationDropdownList: React.FC<DropdownProps> = ({ authenticated }) => {
 				<section className="subscriptions">
 					<h2 className="small">Subjects</h2>
 
-					{data.map((el: any) => (
-						<div key={el.id} className="row a-centered j-between">
-							<Link to={`/subject/${el.slug}`} className="row a-centered">
-								<img src={el.thumbnail} alt="Challenges" />
-								{el.name}
-							</Link>
-						</div>
-					))}
+					{data
+						.sort((a: any, b: any) => {
+							if (a.name < b.name) return -1;
+							if (a.name > b.name) return 1;
+							return 0;
+						})
+						.map((el: any) => (
+							<div key={el.id} className="row a-centered j-between">
+								<Link to={`/subject/${el.slug}`} className="row a-centered">
+									<img src={el.thumbnail} alt="Challenges" />
+									{el.name}
+								</Link>
+							</div>
+						))}
 				</section>
 			)}
 		</>
