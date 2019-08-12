@@ -15,7 +15,14 @@ export const getTimeDifference = (timestamp: string): string => {
 
 	const days = Math.floor(milisecDiff / 1000 / 60 / (60 * 24));
 	const dateDiff = new Date(milisecDiff);
-	if (days < 1) return `${dateDiff.getHours()} hours ago`;
+
+	if (days < 1) {
+		if (dateDiff.getHours() === 1) return `1 hour ago`;
+		return `${dateDiff.getHours()} hours ago`;
+	}
+	if (days === 1) {
+		return `1 day ago`;
+	}
 	return `${days} days ago`;
 };
 

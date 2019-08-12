@@ -19,9 +19,12 @@
 	align-items: flex-end;
 }
 
-.submission-detail h1 .light {
-	padding-left: 8px;
+.submission-detail .light {
 	margin: 0;
+}
+
+.submission-detail .author {
+	padding-left: 8px;
 }
 
 .submission-detail p {

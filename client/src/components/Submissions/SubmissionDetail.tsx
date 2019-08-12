@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Skeleton } from "..";
+import { getTimeDifference } from "../../helpers";
 
 import "./SubmissionDetail.css";
 
@@ -43,13 +44,14 @@ const SubmissionDetail: React.FC<DetailProps> = ({
 				<div className="column content">
 					<h1 className="row">
 						{submission.title}
-						<p className="light">
+						<p className="light author">
 							by{" "}
 							<Link className="link" to={`/user/${submission.author.username}`}>
 								{submission.author.username}
 							</Link>
 						</p>
 					</h1>
+					<p className="light">{getTimeDifference(submission.createdAt)}</p>
 					<p>{submission.content}</p>
 					<a
 						target="_blank"
