@@ -19,14 +19,14 @@ const SidebarFilter: React.FC<FilterProps> = ({
 }) => {
 	return (
 		<aside className="filter">
-			<div className="vertical-tabs">
-				<select value={year} onChange={(e) => setYear(e.target.value)}>
-					<option hidden>Year</option>
-					<option value={currYear - 3}>{currYear - 3}</option>
-					<option value={currYear - 2}>{currYear - 2}</option>
-					<option value={currYear - 1}>{currYear - 1}</option>
-					<option value={currYear}>{currYear}</option>
-				</select>
+			<select value={year} onChange={(e) => setYear(e.target.value)}>
+				<option hidden>Year</option>
+				<option value={currYear - 3}>{currYear - 3}</option>
+				<option value={currYear - 2}>{currYear - 2}</option>
+				<option value={currYear - 1}>{currYear - 1}</option>
+				<option value={currYear}>{currYear}</option>
+			</select>
+			<div className="vertical-tabs md-row wrap j-between">
 				<button
 					type="button"
 					className={month === "jan" ? "active" : ""}

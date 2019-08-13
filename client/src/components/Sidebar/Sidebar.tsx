@@ -43,7 +43,7 @@ const Sidebar: React.FC = () => {
 				<section className="row">
 					<div className="column">
 						<Link to="/">Feed</Link>
-						<Link to="/challenges">Code challenges</Link>
+						<Link to="/submissions">Code challenges</Link>
 					</div>
 					<div className="column a-end">
 						<Link to="/privacy">Privacy policy</Link>

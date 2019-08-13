@@ -37,9 +37,9 @@ const SubmissionsOverviewPage = () => {
 	}, [month, year]);
 
 	return (
-		<div className="body spaced row">
+		<div className="body spaced row md-column">
 			<Sidebar />
-			<main>
+			<main className="submissions-overview">
 				<SubmissionsList
 					submissions={submissions}
 					loading={loadingState}

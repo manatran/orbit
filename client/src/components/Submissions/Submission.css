@@ -47,6 +47,13 @@
 	font-size: 32px;
 }
 
+.submissions-overview .submissions {
+	flex-wrap: wrap;
+}
+
+.submissions-overview .submission {
+	margin-bottom: 16px;
+}
 
 @media only screen and (max-width: 720px) {
 	.submission,

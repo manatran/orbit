@@ -211,4 +211,11 @@ p.light {
 	.md-hide {
 		display: none;
 	}
+
+	.md-column {
+		flex-direction: column;
+	}
+	.md-row {
+		flex-direction: row;
+	}
 }
