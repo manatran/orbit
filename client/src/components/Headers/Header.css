@@ -37,6 +37,10 @@ header .logo {
 	margin-bottom: 0;
 }
 
+.secondary .column {
+	min-width: 33%;
+}
+
 .secondary .column:last-of-type {
 	text-align: right;
 }
@@ -66,3 +70,4 @@ header .logo {
 .contest-list-item {
 	margin-bottom: 8px;
 }
+
