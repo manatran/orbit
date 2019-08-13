@@ -8,6 +8,7 @@ import AskPage from "./Questions/AskPage";
 import QuestionDetailPage from "./Questions/QuestionDetailPage";
 import QuestionsOverviewPage from "./Questions/QuestionsOverviewPage";
 import ReportPage from "./Report/ReportPage";
+import SearchPage from "./Search/SearchPage";
 import SubmissionDetailPage from "./Submissions/SubmissionDetailPage";
 import SubmissionsOverviewPage from "./Submissions/SubmissionsOverviewPage";
 import SubmitPage from "./Submissions/SubmitPage";
@@ -26,6 +27,7 @@ export {
 	QuestionDetailPage,
 	QuestionsOverviewPage,
 	ReportPage,
+	SearchPage,
 	SubmissionDetailPage,
 	SubmissionsOverviewPage,
 	SubmitPage,

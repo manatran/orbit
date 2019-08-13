@@ -16,6 +16,7 @@ import Question from "./Questions/Question";
 import QuestionDetail from "./Questions/QuestionDetail";
 import QuestionsList from "./Questions/QuestionsList";
 import ScrollTop from "./ScrollTop/ScrollTop";
+import SearchResults from "./Search/SearchResults";
 import SearchBar from "./SearchBar/SearchBar";
 import Settings from "./Settings/Settings";
 import Sidebar from "./Sidebar/Sidebar";
@@ -53,6 +54,7 @@ export {
 	QuestionDetail,
 	QuestionsList,
 	ScrollTop,
+	SearchResults,
 	SearchBar,
 	Settings,
 	Sidebar,

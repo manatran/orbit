@@ -12,6 +12,7 @@ import {
 	QuestionDetailPage,
 	QuestionsOverviewPage,
 	ReportPage,
+	SearchPage,
 	SettingsPage,
 	SignoutPage,
 	SubmissionDetailPage,
@@ -25,8 +26,12 @@ const AppRouter: React.FC = () => {
 		<React.Fragment>
 			<Navigation />
 			<Switch>
+				{/* Home */}
 				<Redirect from="/home" to="/" />
 				<Route exact path="/" component={HomePage} />
+
+				{/* Search */}
+				<Route exact path="/search" component={SearchPage} />
 
 				{/* Authentication */}
 				<Redirect from="/login" to="/signup" />
