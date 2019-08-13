@@ -14,7 +14,7 @@ const Sidebar: React.FC = () => {
 	const [{ data }] = useFetch("/category/popular", []);
 
 	return (
-		<aside className="column">
+		<aside className="column md-hide">
 			<Link to="/ask" className="button">
 				Ask a question
 			</Link>

@@ -42,7 +42,7 @@ input:focus {
 	outline: none;
 }
 
-button.button {
+.dashboard button.button {
 	margin-top: 24px;
 }
 

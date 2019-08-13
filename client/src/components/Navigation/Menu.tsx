@@ -34,6 +34,11 @@ const Menu: React.FC<MenuProps> = ({ authenticated, user }) => {
 				<i className="material-icons icon">create</i>
 				<span>Create post</span>
 			</Link>
+
+			<Link to="/submit" className="row a-centered" title="Submit">
+				<i className="material-icons icon">add_to_photos</i>
+				<span>Submit creation</span>
+			</Link>
 		</>
 	);
 };
