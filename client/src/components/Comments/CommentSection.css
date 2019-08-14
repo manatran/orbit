@@ -1,5 +1,11 @@
 .create-comment {
 	margin-bottom: 16px;
+	width: 100%;
+}
+
+.create-comment form {
+	width: 100%;
+	max-width: 100%;
 }
 
 .comment-section .meta {
