@@ -17,6 +17,7 @@
 		"default_icon": "icon.png"
 	},
 	"permissions": [
+		"*://localhost/*",
 		"activeTab"
 	]
 }

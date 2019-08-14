@@ -1,4 +1,5 @@
-const fetchUrl = "http://localhost:5000/api/v1"
+// TODO: update fetch url
+const fetchUrl = "http://localhost:5000/api/v1";
 const nickname = document.getElementsByClassName("p-nickname")[0];
 
 const getReputation = (username) => {
@@ -11,7 +12,7 @@ const getReputation = (username) => {
 				return;
 			}
 
-			// Show reputation on page
+			// Display reputation on page
 			showReputation(data.rep);
 		})
 		.catch(err => console.warn(err));
