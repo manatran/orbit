@@ -23,6 +23,31 @@ exports.current_user = (req, res, next) => {
   );
 };
 
+// Get user reputation
+exports.get_reputation = (req, res, next) => {
+	const { username } = req.params;
+
+	// Get user from database
+	models.User.findOne({
+    where: { username: username },
+    attributes: {
+      exclude: ["accessToken"]
+    }
+	})
+		.then(profile => {
+			if (!profile) {
+				return res.status(404).json({ error: "User not found" });
+			}
+
+			res.json({rep: profile.reputation})
+		})
+		.catch(err => {
+			res.status(500).json({
+				error: err
+			});
+		});
+}
+
 // Get user by username
 exports.get_user = (req, res, next) => {
   const { username } = req.params;

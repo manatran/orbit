@@ -1,0 +1,22 @@
+{
+	"manifest_version": 2,
+  "name": "Orbit Reputation",
+  "description": "Displays Orbit reputation on GitHub profiles.",
+	"version": "1.0.0",
+	"content_scripts": [
+		{
+			"matches": ["https://github.com/*"],
+			"css": ["reputation.css"],
+			"js": ["reputation.js"]
+		}
+	],
+	"icons": {
+		"128": "icon_128.png"
+	},
+	"browser_action": {
+		"default_icon": "icon.png"
+	},
+	"permissions": [
+		"activeTab"
+	]
+}

@@ -61,6 +61,10 @@ npm run c-start
 
 Happy coding!
 
+## Google Chrome extension
+
+This project comes with an extension for the Google Chrome browser. It displays reputation gained by users on their GitHub profiles. You can install it here: TODO: upload and link here
+
 ## Try it out
 
 This project will soon be hosted online.

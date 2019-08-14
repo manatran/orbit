@@ -34,6 +34,7 @@ router.get("/github/callback", authController.github);
 router.get("/user", auth.authenticateJWT(), userController.current_user);
 router.delete("/user", auth.authenticateJWT(), userController.delete_user);
 router.get("/user/:username", userController.get_user);
+router.get("/user/:username/reputation", userController.get_reputation);
 
 // Search routes
 router.get("/search/:param", searchController.search);
