@@ -153,6 +153,14 @@ nav .button.signup {
 	border-color: var(--text-lighter);
 }
 
+nav .small-search {
+	padding: 8px;
+	margin: 4px 0;
+	box-sizing: border-box;
+	border: solid 1px var(--light-grey);
+}
+
+
 @media only screen and (max-width: 720px) {
 	nav .dropdown {
 		width: auto !important;

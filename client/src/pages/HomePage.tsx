@@ -18,9 +18,7 @@ interface HomePageProps {
 const HomePage: React.FC<HomePageProps> = ({ auth }) => {
 	return (
 		<>
-			{/* TODO: Logged in header */}
 			{auth.authenticated ? <SubmissionHeader /> : <Header />}
-
 			<div className="body row">
 				<Sidebar />
 				<main>

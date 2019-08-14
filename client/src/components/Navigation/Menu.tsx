@@ -18,9 +18,9 @@ const Menu: React.FC<MenuProps> = ({ authenticated, user }) => {
 				<i className="material-icons icon">trending_up</i>
 				<span>Feed</span>
 			</Link>
-			<Link to="/challenges" className="row a-centered" title="Challenges">
+			<Link to="/submissions" className="row a-centered" title="Submissions">
 				<i className="material-icons icon">important_devices</i>
-				<span>Challenges</span>
+				<span>Submissions</span>
 			</Link>
 
 			{authenticated && user.profile.isAdmin && (

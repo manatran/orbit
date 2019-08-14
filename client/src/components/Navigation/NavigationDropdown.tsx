@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { useFetch } from "../../hooks";
@@ -38,6 +38,7 @@ const NavigationDropdownButton = () => {
 };
 
 const NavigationDropdownList: React.FC<DropdownProps> = ({ authenticated }) => {
+	const [search, setSearch] = useState("");
 	const [{ data }] = useFetch("/categories", []);
 
 	return (
@@ -51,6 +52,14 @@ const NavigationDropdownList: React.FC<DropdownProps> = ({ authenticated }) => {
 				<section className="subscriptions">
 					<h2 className="small">Subjects</h2>
 
+					<input
+						className="small-search"
+						type="text"
+						value={search}
+						onChange={(e) => setSearch(e.target.value)}
+						placeholder="Search subjects"
+					/>
+
 					{data &&
 						!data.error &&
 						data
@@ -58,6 +67,12 @@ const NavigationDropdownList: React.FC<DropdownProps> = ({ authenticated }) => {
 								if (a.name < b.name) return -1;
 								if (a.name > b.name) return 1;
 								return 0;
+							})
+							.filter((item: any) => {
+								return (
+									item.name.toLowerCase().includes(search.toLowerCase()) ||
+									item.slug.includes(search.toLowerCase())
+								);
 							})
 							.map((el: any) => (
 								<div key={el.id} className="row a-centered j-between">
