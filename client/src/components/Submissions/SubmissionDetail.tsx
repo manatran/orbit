@@ -28,8 +28,8 @@ const SubmissionDetail: React.FC<DetailProps> = ({
 
 	if (submission && !submission.error) {
 		return (
-			<section className="submission-detail card row">
-				<div className="column">
+			<section className="submission-detail card row md-column">
+				<div>
 					<a
 						target="_blank"
 						rel="noopener noreferrer"

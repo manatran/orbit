@@ -7,6 +7,7 @@ Orbit is a wholesome community for developers.
   - [Screenshots](#Screenshots)
   - [Prerequisites](#Prerequisites)
   - [Getting started](#Getting-started)
+  - [Browser extension](#Browser-extension)
   - [Try it out](#Try-it-out)
   - [Contributors](#Contributors)
   - [License](#License)

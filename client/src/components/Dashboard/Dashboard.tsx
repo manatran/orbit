@@ -24,7 +24,7 @@ const Dashboard: React.FC<DashboardProps> = ({ auth }) => {
 	}, [auth]);
 
 	return (
-		<section className="body spaced row md-column">
+		<section className="dashboard body spaced row md-column">
 			<aside className="vertical-tabs column md-row">
 				<button
 					className={tab === "reports" ? "active" : ""}
@@ -46,7 +46,7 @@ const Dashboard: React.FC<DashboardProps> = ({ auth }) => {
 				</button>
 			</aside>
 
-			<main className="dashboard">
+			<main>
 				<RenderContent auth={auth} tab={tab} />
 			</main>
 			{redirect && <Redirect to="/" />}

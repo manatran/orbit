@@ -23,7 +23,7 @@ const SubmissionDetailPage: React.FC<DetailProps> = ({ match }) => {
 					error={error}
 				/>
 			</main>
-			<aside />
+			<aside className="sm-hide" />
 		</div>
 	);
 };

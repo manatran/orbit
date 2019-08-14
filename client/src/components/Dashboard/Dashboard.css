@@ -15,6 +15,10 @@
 	background-color: white;
 }
 
+.dashboard .vertical-tabs {
+	background-color: var(--bg);
+}
+
 form {
 	max-width: 720px;
 }
@@ -63,5 +67,12 @@ input:focus {
 @media only screen and (max-width: 1000px) {
 	.dashboard {
 		flex-direction: column;
+	}
+
+	.dashboard .vertical-tabs {
+		width: 100%;
+		margin:0;
+		padding-bottom: 0;
+		justify-content: space-between;
 	}
 }
