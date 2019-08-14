@@ -16,7 +16,7 @@ const ProfilePage: React.FC<ProfileProps> = ({ auth, match }) => {
 	useTitle(`${data && data.login}`);
 
 	return (
-		<div className="body spaced row">
+		<div className="body spaced row md-column">
 			{data && !data.error ? (
 				<>
 					<ProfileSidebar user={data} currUser={auth.user} />

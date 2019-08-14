@@ -12,21 +12,23 @@ interface ProfileSidebarProps {
 const ProfileSidebar: React.FC<ProfileSidebarProps> = ({ user, currUser }) => {
 	return (
 		<aside className="profile-sidebar">
-			<section className="meta">
+			<section className="meta column md-row">
 				<img src={user.avatar_url} alt={user.login} />
-				<h2>{user.login}</h2>
-				<p className="rep">{user.profile.reputation} rep</p>
-				<p className="bio">{user.bio}</p>
+				<div>
+					<h2>{user.login}</h2>
+					<p className="rep">{user.profile.reputation} rep</p>
+					<p className="bio">{user.bio}</p>
 
-				{user.profile.id === currUser.profile.id && (
-					<Link to="/settings" className="button light">
-						Settings
-					</Link>
-				)}
+					{user.profile.id === currUser.profile.id && (
+						<Link to="/settings" className="button light">
+							Settings
+						</Link>
+					)}
+				</div>
 			</section>
 
 			{user.profile.isAdmin && (
-				<section className="badges">
+				<section className="badges sm-hide">
 					<div className="row a-centered">
 						<img src={Badge} alt="admin" />
 						<h4>Moderator</h4>

@@ -2,6 +2,7 @@
 	border-radius: 4px;
 	width: 128px;
 	height: 128px;
+	margin-right: 16px;
 }
 
 .profile-sidebar .meta h2 {
@@ -31,11 +32,33 @@
 	border-bottom: solid 1px var(--light-grey);
 }
 
-
-
-
 .profile-sidebar .badges img {
 	width: 32px;
 	height: 32px;
 	margin-right: 8px;
+}
+
+@media only screen and (max-width: 1000px) {
+	.profile-sidebar {
+		width: 100%;
+		position: relative;
+		top: 0;
+	}
+
+	.profile-sidebar .meta img {
+		width: 64px;
+		height: 64px;
+		min-width: 64px;
+		min-height: 64px;
+	}
+
+	.profile-sidebar .meta {
+		width: 100%;
+	}
+
+	.profile-sidebar .profile-sidebar {
+		position: relative;
+		top: 0;
+		width: 100%;
+	}
 }
