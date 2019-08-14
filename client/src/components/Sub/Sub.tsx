@@ -9,17 +9,9 @@ interface SubProps {
 	icon: string;
 	title: string;
 	description?: string;
-	subs: number;
 }
 
-const Sub: React.FC<SubProps> = ({
-	slug,
-	big,
-	icon,
-	title,
-	description,
-	subs,
-}) => {
+const Sub: React.FC<SubProps> = ({ slug, big, icon, title, description }) => {
 	return (
 		<Link
 			to={`/subject/${slug}`}
@@ -29,7 +21,6 @@ const Sub: React.FC<SubProps> = ({
 			<div className="meta">
 				<p>{title}</p>
 				{big && description && <p className="description">{description}</p>}
-				<p className="subs">{subs || 0} subscribers</p>
 			</div>
 		</Link>
 	);

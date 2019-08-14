@@ -32,7 +32,6 @@ const Sidebar: React.FC = () => {
 								slug={sub.slug}
 								icon={sub.thumbnail}
 								title={sub.name}
-								subs={sub.subscribers}
 							/>
 						))}
 					</>

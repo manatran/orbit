@@ -150,7 +150,6 @@ const Categories: React.FC<CategoriesProps> = ({ auth }) => {
 							title={el.name}
 							description={el.description}
 							icon={el.thumbnail}
-							subs={el.subscribers}
 						/>
 					))}
 			</div>

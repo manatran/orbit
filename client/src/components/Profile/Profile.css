@@ -4,6 +4,7 @@
   position: sticky;
 	top: 44px;
 	margin-bottom: 16px;
+	z-index: 100;
 }
 
 .tab-nav button {
