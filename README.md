@@ -52,8 +52,8 @@ module.exports = {
 Install all dependencies and run the application:
 
 ```sh
-npm run c-install
-npm run c-start
+npm run install-all
+npm run start-all
 ```
 
 Happy coding!

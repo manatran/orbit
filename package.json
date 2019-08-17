@@ -7,7 +7,7 @@
     "lint": "cd client && npm run lint",
     "format": "cd client && npm run format",
     "start-all": "concurrently \"cd client && npm start\" \"cd server && npm run serve\"",
-    "install-all": "concurrently \"npm install\" \"cd client && npm install\" \"cd server && npm install\""
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install"
   },
   "repository": "https://github.com/manatran/orbit.git",
   "author": "Manaus Transez",
