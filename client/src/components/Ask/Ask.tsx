@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router";
+import { sortAlphabetically } from "../../helpers";
 import { fetchUrl, useFetch } from "../../hooks";
 
 import "./Ask.css";
@@ -67,7 +68,7 @@ const Ask: React.FC<AskProps> = ({ token, authenticated }) => {
 					/>
 					<SelectList
 						placeholder="Choose a community"
-						options={data}
+						options={data.sort(sortAlphabetically("name"))}
 						value={subject}
 						setValue={setSubject}
 					/>

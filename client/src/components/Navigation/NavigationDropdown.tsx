@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { sortAlphabetically } from "../../helpers";
 import { useFetch } from "../../hooks";
 import Dropdown from "../Dropdown/Dropdown";
 import { Menu } from "../index";
@@ -63,11 +64,7 @@ const NavigationDropdownList: React.FC<DropdownProps> = ({ authenticated }) => {
 					{data &&
 						!data.error &&
 						data
-							.sort((a: any, b: any) => {
-								if (a.name < b.name) return -1;
-								if (a.name > b.name) return 1;
-								return 0;
-							})
+							.sort(sortAlphabetically("name"))
 							.filter((item: any) => {
 								return (
 									item.name.toLowerCase().includes(search.toLowerCase()) ||

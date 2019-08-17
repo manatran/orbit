@@ -34,3 +34,11 @@ export const isEmpty = (value: any) =>
 
 export const capitalizeFirstLetter = (input: string) =>
 	input.charAt(0).toUpperCase() + input.slice(1);
+
+export const sortAlphabetically = (prop: string) => {
+	return (a: any, b: any) => {
+		if (a[prop] < b[prop]) return -1;
+		if (a[prop] > b[prop]) return 1;
+		return 0;
+	};
+};

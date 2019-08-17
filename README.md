@@ -12,10 +12,6 @@ Orbit is a wholesome community for developers.
   - [Contributors](#Contributors)
   - [License](#License)
 
-## Screenshots
-
-{{ Coming soon }}
-
 ## Prerequisites
 
 > [Node.js](https://nodejs.org/en/) >=10.11.0

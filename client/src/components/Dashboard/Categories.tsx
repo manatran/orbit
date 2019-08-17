@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Sub } from "..";
 import { fetchUrl, useFetch } from "../../hooks";
 import { SelectList } from "../Ask/Ask";
+import { sortAlphabetically } from "../../helpers";
 
 interface CategoriesProps {
 	auth: any;
@@ -143,15 +144,17 @@ const Categories: React.FC<CategoriesProps> = ({ auth }) => {
 				<h2>All subjects</h2>
 				{data &&
 					!data.error &&
-					data.map((el: any) => (
-						<Sub
-							key={el.id}
-							slug={el.slug}
-							title={el.name}
-							description={el.description}
-							icon={el.thumbnail}
-						/>
-					))}
+					data
+						.sort(sortAlphabetically("name"))
+						.map((el: any) => (
+							<Sub
+								key={el.id}
+								slug={el.slug}
+								title={el.name}
+								description={el.description}
+								icon={el.thumbnail}
+							/>
+						))}
 			</div>
 		</section>
 	);
