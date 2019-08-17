@@ -22,14 +22,14 @@ const QuestionDetail: React.FC<DetailProps> = ({
 	const [liked, setLiked] = useState(0);
 	const [{ data }] = useFetch(`/comments/${id}`, []);
 
-	const endorse = () => {
-		// TODO: POST request to increment or decrement
-		if (liked) {
-			setLiked(0);
-		} else {
-			setLiked(1);
-		}
-	};
+	// const endorse = () => {
+	// 	// TODO: POST request to increment or decrement
+	// 	if (liked) {
+	// 		setLiked(0);
+	// 	} else {
+	// 		setLiked(1);
+	// 	}
+	// };
 
 	if (loading) {
 		return (
@@ -60,14 +60,14 @@ const QuestionDetail: React.FC<DetailProps> = ({
 				)}
 
 				<div className="row a-centered">
-					<button
+					{/* <button
 						onClick={() => endorse()}
 						className={`likes row a-centered ${liked && `liked`}`}
 						title="Endorse this post"
 					>
 						<i className="material-icons">stars</i>
 						{question.totalLikes + liked}
-					</button>
+					</button> */}
 					<div className="content">
 						<p>{question.content}</p>
 					</div>
