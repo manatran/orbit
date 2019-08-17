@@ -60,14 +60,24 @@ Happy coding!
 
 ## Browser extension
 
-This project comes with an extension for both Google Chrome and Firefox. It displays reputation gained by users on their GitHub profiles. You can install it here: 
+This project comes with an extension for both Google Chrome and Firefox. It displays reputation gained by users on their GitHub profiles. Here's how to install it: 
 
--  [Google Chrome]()
--  [Firefox]()
+### Google Chrome
+
+1. Open the Extension Management page by navigating to [chrome://extensions](chrome://extensions).
+  - The Extension Management page can also be opened by clicking on the Chrome menu, hovering over **More Tools** then selecting **Extensions**.
+2. Enable Developer Mode by clicking the toggle switch next to **Developer Mode**.
+3. Click the **LOAD UNPACKED** button and select the extension directory.
+
+### Firefox
+
+1. Open [about:debugging](about:debugging) in Firefox, click **Load Temporary Add-on** and select the manifest.json file in the extension's directory.
+
+Ta-da! The extension has been successfully installed.
 
 ## Try it out
 
-This project will soon be hosted online.
+You can try out the project [here](https://manatran.github.io/). Please keep in mind that the server hosted on [Heroku](https://orbit-heroku.herokuapp.com/) can take a while to start up. Refreshing the site might be necessary if your content does not load.
 
 ## Contributors
 

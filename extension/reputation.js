@@ -1,4 +1,4 @@
-const fetchUrl = "http://orbit-heroku.herokuapp.com/api/v1";
+const fetchUrl = "https://orbit-heroku.herokuapp.com/api/v1";
 const nickname = document.getElementsByClassName("p-nickname")[0];
 
 const getReputation = (username) => {
