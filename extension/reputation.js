@@ -1,5 +1,4 @@
-// TODO: update fetch url
-const fetchUrl = "http://localhost:5000/api/v1";
+const fetchUrl = "http://orbit-heroku.herokuapp.com/api/v1";
 const nickname = document.getElementsByClassName("p-nickname")[0];
 
 const getReputation = (username) => {
