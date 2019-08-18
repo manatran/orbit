@@ -102,8 +102,6 @@ exports.create_category = (req, res, next) => {
 		});
 	}
 
-	console.log(parent)
-
 	const args = {
 		name: name,
 		slug: slug,

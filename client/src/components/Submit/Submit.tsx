@@ -23,7 +23,6 @@ const Submit: React.FC<SubmitProps> = ({ token, authenticated }) => {
 			.then((res) => res.json())
 			.then((data) => {
 				if (data && !data.error) {
-					console.log(data.id);
 					setContest(data.id);
 				}
 			})

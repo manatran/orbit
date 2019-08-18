@@ -59,7 +59,7 @@ const Subcomment: React.FC<SubcommentProps> = ({
 					</div>
 					<p>{content}</p>
 					<p className="row options light">
-						{author.id === auth.user.profile.id}
+						{auth.authenticated && author.id === auth.user.profile.id}
 						<span className="danger" onClick={() => deleteSubcomment()}>
 							Delete
 						</span>
