@@ -23,12 +23,14 @@ const QuestionDetailPage: React.FC<DetailProps> = ({ match }) => {
 			<div className="body row">
 				<Sidebar />
 				<main>
-					<QuestionDetail
-						id={data && data.id}
-						question={data}
-						loading={loading}
-						error={error}
-					/>
+					{data && !data.error && (
+						<QuestionDetail
+							id={data.id}
+							question={data}
+							loading={loading}
+							error={error}
+						/>
+					)}
 					{!loading && data && !data.error && <CommentSection id={data.id} />}
 				</main>
 			</div>
