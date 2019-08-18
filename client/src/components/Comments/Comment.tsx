@@ -101,38 +101,44 @@ const Comment: React.FC<CommentProps> = ({
 							<span onClick={() => setShowInput(!showInput)}>
 								{showInput ? "Cancel" : "Reply"}
 							</span>
-							{auth.authenticated && author.id === auth.user.profile.id}
-							<span className="danger" onClick={() => deleteComment()}>
-								Delete
-							</span>
+							{auth.authenticated && author.id === auth.user.profile.id && (
+								<span className="danger" onClick={() => deleteComment()}>
+									Delete
+								</span>
+							)}
 						</p>
-						{showInput && (
-							<div className="subcomment-input">
-								<form onSubmit={(e: any) => createSubcomment(e)}>
-									<textarea
-										placeholder="Reply to this comment"
-										value={subcommentContent}
-										onChange={(e: any) => setSubcommentContent(e.target.value)}
-									/>
-									<div className="button-container row">
-										<button className="button submit" type="submit">
-											Submit
-										</button>
-										{subcommentContent && (
-											<button
-												className="button light"
-												onClick={() => {
-													setShowInput(false);
-													setSubcommentContent("");
-												}}
-											>
-												Cancel
+						{showInput &&
+							(auth.authenticated ? (
+								<div className="subcomment-input">
+									<form onSubmit={(e: any) => createSubcomment(e)}>
+										<textarea
+											placeholder="Reply to this comment"
+											value={subcommentContent}
+											onChange={(e: any) =>
+												setSubcommentContent(e.target.value)
+											}
+										/>
+										<div className="button-container row">
+											<button className="button submit" type="submit">
+												Submit
 											</button>
-										)}
-									</div>
-								</form>
-							</div>
-						)}
+											{subcommentContent && (
+												<button
+													className="button light"
+													onClick={() => {
+														setShowInput(false);
+														setSubcommentContent("");
+													}}
+												>
+													Cancel
+												</button>
+											)}
+										</div>
+									</form>
+								</div>
+							) : (
+								<p className="light">Please sign up to post a comment.</p>
+							))}
 					</div>
 					{!loading && (
 						<SubcommentsList
