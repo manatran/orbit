@@ -66,6 +66,7 @@ exports.create_comment = (req, res, next) => {
 
 	models.Comment.create(args)
 		.then(comment => {
+			models.User.increment('reputation', { by: 5, where: { id }});
 			res.status(201).json(comment);
 		})
 		.catch(err => {
@@ -81,6 +82,7 @@ exports.delete_comment = (req, res, next) => {
 			comment
 				.destroy()
 				.then(success => {
+					models.User.increment('reputation', { by: 5, where: { id: comment.authorId }});
 					res.status(200).json({
 						success: "Comment sucessfully deleted"
 					});

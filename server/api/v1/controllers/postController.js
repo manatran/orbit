@@ -138,6 +138,7 @@ exports.create_post = (req, res, next) => {
 
 	models.Post.create(args)
 		.then(post => {
+			models.User.increment('reputation', { by: 10, where: { id }});
 			res.status(201).json(post);
 		})
 		.catch(err => {
@@ -204,6 +205,7 @@ exports.delete_post = (req, res, next) => {
 			post
 				.destroy()
 				.then(success => {
+					models.User.decrement('reputation', { by: 10, where: { id: post.authorId }});
 					res.status(200).json({
 						success: "Post sucessfully deleted"
 					});
