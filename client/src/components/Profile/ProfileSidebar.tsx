@@ -6,10 +6,10 @@ import "./ProfileSidebar.css";
 
 interface ProfileSidebarProps {
 	user: any;
-	currUser: any;
+	auth: any;
 }
 
-const ProfileSidebar: React.FC<ProfileSidebarProps> = ({ user, currUser }) => {
+const ProfileSidebar: React.FC<ProfileSidebarProps> = ({ user, auth }) => {
 	return (
 		<aside className="profile-sidebar">
 			<section className="meta column md-row">
@@ -19,7 +19,7 @@ const ProfileSidebar: React.FC<ProfileSidebarProps> = ({ user, currUser }) => {
 					<p className="rep">{user.profile.reputation} rep</p>
 					<p className="bio">{user.bio}</p>
 
-					{user.profile.id === currUser.profile.id && (
+					{auth.authenticated && user.profile.id === auth.currUser.profile.id && (
 						<Link to="/settings" className="button light">
 							Settings
 						</Link>

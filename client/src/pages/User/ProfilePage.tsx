@@ -19,7 +19,7 @@ const ProfilePage: React.FC<ProfileProps> = ({ auth, match }) => {
 		<div className="body spaced row md-column">
 			{data && !data.error ? (
 				<>
-					<ProfileSidebar user={data} currUser={auth.user} />
+					<ProfileSidebar user={data} auth={auth} />
 					<main>
 						<Profile id={data.profile.id} />
 					</main>
